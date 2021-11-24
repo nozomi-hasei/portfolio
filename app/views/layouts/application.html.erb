@@ -4,17 +4,12 @@
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
   </head>
-
   <body>
-    <header>
-    </header>
-    <%= yield %>
-    <footer>
-      corpyright Portfolio by nozomi hasei
-    </footer>
+  <%= yield %>
   </body>
 </html>

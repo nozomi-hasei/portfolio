@@ -1,15 +1,400 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body{
+  background:#000000;
+  max-height: auto;
+}
+
+section{
+  height: 350px;
+}
+
+p{
+  color: rgb(182, 182, 182);
+  font-size: 0.9rem;
+}
+
+img{
+  max-width:700px;
+  height:auto;
+}
+
+h1{
+  text-align: center;
+  font-size:1.7rem;
+  color: rgb(182, 182, 182);
+}
+
+.wrap{
+  max-height: 500px;
+}
+
+h2{
+  font-size:1.3rem;
+  margin:0 0 50px 0;
+  color: rgb(182, 182, 182);
+  line-height: 1.4;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+}
+
+/*写真と文章*/
+.area{
+  position:relative;
+  margin:0 auto 25% auto;
+  max-width: 100%;
+  max-height: 1000PX;
+}
+/*1,3目写真*/
+.area figure{
+  position:relative;
+  left:0;
+  top:10px;
+  width:0%;
+  line-height: 0;
+}
+
+.area:nth-child(2n) figure{
+  left:50%;
+  top:auto
+}
+
+/*1,3目写真の文章*/
+.area .box{
+  position:absolute;
+  top:-10%;
+  left: inherit;
+  left: 50%;
+  padding:20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+  background-color: rgb(0, 0, 0);
+}
+
+/*２目写真の文章*/
+.area:nth-child(2n) .box{
+  left:inherit;
+  right:51%;
+  top:-10%;
+}
+
+
+/*Footer*/
+
+footer{
+  width:100%;
+  z-index: 999;
+  /*装飾のためのCSS*/
+  padding:20px 0;
+  bottom:80px;
+  height:0px;
+  color: #fff;
+  text-align: center;
+  background:rgb(0, 0, 0);
+}
+
+footer a{
+  color:#fff; 
+}
+
+/*＝タブレット以下の見え方＝*/
+
+@media screen and (max-width:768px){
+.area figure{
+  width:50%;
+}
+  
+footer{
+  position:inherit;
+}
+
+}
+
+@media screen and (max-width:600px){
+h2{
+  text-align: center;
+}
+  
+.area:nth-child(2n) figure {
+    left: 0;
+}
+  
+.area figure{
+  width:100%;
+}
+.area .box,
+.area:nth-child(2n) .box{
+    position: relative;
+    top: 0;
+    left: 0;
+  right: inherit;
+  padding:20px;
+}
+}
+
+
+
+#g-nav.panelactive{
+  position:fixed;
+  z-index: 999;
+top: 0;
+width:100%;
+  height: 100vh;
+}
+
+.circle-bg{
+  position: fixed;
+z-index:3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(40, 40, 40);
+transform: scale(0);
+left:-50px;
+  top:-50px;
+  transition: all .6s;
+}
+
+.circle-bg.circleactive{
+transform: scale(50);
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list{
+  display: none;
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+  display: block; 
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+  opacity:1;
+}
+
+#g-nav.panelactive h1 ul li{
+animation-name:gnaviAnime;
+animation-duration:1s; 
+animation-delay:.2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li{
+text-align: center; 
+list-style: none;
+}
+
+#g-nav li a{
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+}
+
+
+/*= ボタンのためのCSS =*/
+.openbtn1{
+position:fixed;
+top:10px;
+left: 10px;
+z-index: 9999;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+.openbtn1 span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: rgb(255, 255, 255);
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*========= 上部固定させるためのCSS ===============*/
+#header{
+  height: 70px;/*高さ指定*/
+  width:100%;/*横幅指定*/
+}
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed{
+  position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+
+/*========= top画像 ===============*/
+.top-photo img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*========= top画像1アニメーション ===============*/
+.img-wrap1 {
+  overflow: hidden;
+  position: relative;
+  max-height: 370px;
+}
+
+.img-wrap1:before {
+  animation: img-wrap1 1s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: rgb(0, 0, 0);
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap1 {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*========= top画像2アニメーション ===============*/
+.img-wrap2 {
+  overflow: hidden;
+  position: relative;
+  max-height: 370px;
+}
+
+.img-wrap2:before {
+  animation: img-wrap2 1s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: rgb(0, 0, 0);
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap2 {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+.gallery{
+  columns: 4;/*段組みの数*/
+  padding:0 15px;/*ギャラリー左右に余白をつける*/
+  }
+  
+  .gallery li {
+      margin-bottom: 20px;/*各画像下に余白をつける*/
+  }
+  
+  /*ギャラリー内のイメージは横幅100%にする*/
+  .gallery img{
+    width:100%;
+    height:auto;
+    vertical-align: bottom;/*画像の下にできる余白を削除*/}
+  
+  /*　横幅900px以下の段組み設定　*/
+  @media only screen and (max-width: 900px) {
+    .gallery{
+    columns:3;
+    } 
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .gallery{
+    columns: 2;
+    } 
+  }
+  
+  
+
+  /*画像を出現させるアニメーションCSS*/
+  
+  .flipLeft{
+  animation-name: flipLeft;
+  animation-duration:0.2s;
+  animation-fill-mode:forwards;
+  perspective-origin: left center;
+  opacity: 0;
+  }
+  
+  @keyframes flipLeft{
+    from {
+     transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+    }
+  
+    to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+    }
+  }
+  

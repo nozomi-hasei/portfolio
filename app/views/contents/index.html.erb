@@ -1,7 +1,434 @@
-<div>
-  <% @contents.each do |content| %>
-    <%= content.title %>
-    <%= content.text %>
-    <%= content.image %>
-  <% end %>
-</div>
+<body>
+  <div id="luxy">
+  
+    <%#ヘッダー--------------------------------------%>
+    <header id="header">
+      <h1>NOZOMI HASEI</h1>
+
+      <%#メニューバー---------------------------------%>
+      <div class="openbtn1"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+          <div id="g-nav-list">
+            <h1>NOZOMI HASEI</h1>
+              <ul>
+                <li><%= link_to 'TOP' %></li>
+                <li><%= link_to 'ABOUT', contents_path %></li>
+                <li><%= link_to 'SKILL' %></li>
+                <li><%= link_to 'WORK' %></li>
+                <li><%= link_to 'PHOTO' %></li>
+                <li><%= link_to 'CONTACT' %></li>
+              </ul>
+          </div>
+        </nav>
+      <div class="circle-bg"></div>
+      
+      <%#ヘッダー移動イベント-----------------------------%>
+      <script>
+        function FixedAnime() {   
+          var headerH = $('#header').outerHeight(true);
+          var scroll = $(window).scrollTop();
+          if (scroll >= headerH){
+              $('#header').addClass('fixed');
+            }else{
+              $('#header').removeClass('fixed');
+            }
+        }
+        $('#g-navi a').click(function () {
+          var elmHash = $(this).attr('href');
+          var pos = Math.round($(elmHash).offset().top-120);
+          $('body,html').animate({scrollTop: pos}, 500);
+          return false;
+        });
+        $(window).scroll(function () {
+          FixedAnime();
+        });
+        $(window).on('load', function () {
+          FixedAnime();
+        });
+      </script>
+
+      <%#メニューバーイベント------------------------------%>
+      <script>
+        $(".openbtn1").click(function () {
+          $(this).toggleClass('active');
+            $("#g-nav").toggleClass('panelactive');
+            $(".circle-bg").toggleClass('circleactive');
+        });
+
+        $("#g-nav a").click(function () {
+          $(".openbtn1").removeClass('active');
+            $("#g-nav").removeClass('panelactive');
+            $(".circle-bg").removeClass('circleactive');
+        });
+      </script>
+    </header>
+
+    <%#topスタート----------------------------------------%>
+    <div class="img-wrap1">
+      <div class="top-photo"><img src="/assets/IMG_5918 4.JPG" alt=""></div>
+    </div>
+    <div class="img-wrap2">
+      <div class="top-photo"><img src="/assets/IMG_5918 3.jpg" alt=""></div>
+    </div>
+
+    <%#ABOUTスタート--------------------------------------%>
+    <div class="wrap">
+      <h1>ABOUT</h1>
+    </div>
+    <div id="luxy">
+      <section class="area">
+        <figure class="luxy-el" data-speed-x="5" data-offset="5"><img src="/assets/IMG_5920.JPG" alt=""></figure>
+        <div class="box luxy-el" data-speed-y="5">
+          <h2>NOZOMI HASEI / 長谷井 望</h2>
+            <p>Born in 1993, September 2.</p>
+            <p>When I was a student, I lived in various places in Japan because of my father's work.</p>
+            <p>1999年9月2日生まれ</p>
+            <p>父親の仕事の関係で、日本の様々な場所で生活してきました。</p>
+        </div>
+        <script>
+          window.onscroll = function(){
+            var scrollTop = window.pageYOffset ;
+            if (scrollTop > 900 ) { 
+              $('.area').css('background-color', 'darkslategray');
+              $('.area').css('transition', '8.3s')
+            }
+            if (scrollTop < 1400 ) { 
+              $('.area').css('background-color', 'darkslategray');
+              $('.area').css('transition', '5.5s')
+            }
+          }
+        </script>
+      </section>
+
+      <section class="area">
+        <figure class="luxy-el"data-speed-x="5" data-offset="5"><img src="/assets/IMG_4463.JPG" alt=""></figure>
+        <div class="box luxy-el" data-speed-y="5">
+          <h2>SALES PERSON / セールスパーソン</h2>
+            <p>RING JACKET Co.,Ltd. (2016~)</p>
+            <P>STORE SALES Ⅰ SHINJUKU</p> 
+            <p>SNS (Instagram / YouTube) shooting・editing・operation
+In charge, product listing and inventory management on Isetan EC</p>
+            <p>
+            <p>株式会社 リングヂャケット （2016年〜）</p>
+            <p>ストアセールス１新宿</p>
+            <P>SNS(Instagram / YouTube)撮影・編集・運営
+担当、伊勢丹ECへの商品掲載・在庫管理担当<p>
+        </div>
+      </section>
+
+      <section class="area">
+        <figure class="luxy-el"data-speed-x="5" data-offset="5"><img src="/assets/IMG_0549.JPG" alt=""></figure>
+        <div class="box luxy-el" data-speed-y="5">
+          <h2>PHOTOGRAPHER / フォトグラファー</h2>
+            <p>Experienced product photography and snapshot photography in the apparel industry.</p>
+            <p>I also like taking pictures on holidays and travel destinations.</p>
+            <p>アパレル業界での商品撮影やスナップ撮影を経験</p>
+            <p>また休日や旅行先での写真撮影も好きです</p>
+        </div>
+      </section>
+        
+      <%#<section class="area">
+        <figure class="luxy-el" data-speed-x="5" data-offset="5"><img src="/assets/IMG_4463.JPG" alt=""></figure>
+        <div class="box luxy-el" data-speed-y="5">
+          <h2>Area4</h2>
+            <p></p>
+        </div>
+      </section>%>
+
+    <%#SKILLスタート--------------------------------------%>
+    <div class="wrap">
+      <h1>SKILL</h1>
+    </div>
+
+
+    <%#workスタート--------------------------------------%>
+    <div class="wrap">
+      <h1>WORK</h1>
+    </div>
+
+
+
+    <%#PHOTOスタート--------------------------------------%>
+    <div class="wrap">
+      <h1>PHOTO</h1>
+    </div>
+
+    <div class="wrapper">
+      <ul class="gallery">
+        <li><a href="/assets/IMG_5887.JPG" data-lightbox="gallery1" data-title="Sanson Terrace(Sakuho Town, Minamisaku District, Nagano Prefecture)/山村テラス(長野県南佐久郡佐久穂町)"><img src="assets/IMG_5887.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_5128 3.JPG" data-lightbox="gallery1" data-title="By the window on a rainy day/雨の日の窓際"><img src="/assets/IMG_5128 3.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_5775.JPG" data-lightbox="gallery1" data-title="Antique lighting/アンティーク照明"><img src="/assets/IMG_5775.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_5416.JPG" data-lightbox="gallery1" data-title="the SOHO(Koto-ku, Tokyo)/ソーホー(東京都江東区)"><img src="/assets/IMG_5416.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_5298.JPG" data-lightbox="gallery1" data-title="Painting/絵画"><img src="/assets/IMG_5298.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_6017.JPG" data-lightbox="gallery1" data-title="Friend SNAP/友人スナップ"><img src="/assets/IMG_6017.JPG" alt=""></a></li>
+        <li><a href="/assets/IMG_5288.JPG" data-lightbox="gallery1" data-title="Shibuya Scramble Crossing(Shibuya-ku, Tokyo)/渋谷スクランブル交差点(東京都渋谷区)"><img src="/assets/IMG_5288.JPG" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/09.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/09.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/10.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/10.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/11.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/11.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/12.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/12.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/13.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/13.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/14.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/14.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/15.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/15.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/16.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/16.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/17.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/17.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/18.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/18.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/19.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/19.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/20.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/20.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/21.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/21.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/22.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/22.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/23.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/23.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/24.jpg" data-lightbox="gallery2" data-title="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/24.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/25.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/25.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/26.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/26.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/27.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/27.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/28.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/28.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/29.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/29.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/30.jpg" data-lightbox="gallery3" data-title="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/30.jpg" alt=""></a></li>
+      </ul>
+    </div>
+    <script>
+    //lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
+    
+    lightbox.option({
+      'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
+      'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+    })
+    
+    //ふわっと見せるためのJS。3-5-3 ページが読み込まれたらすぐに動かしたい&画面をスクロールをしたら動かしたい場合内のソースコード使用
+    
+    function fadeAnime(){
+    // flipLeft
+    $('.gallery li').each(function(){ 
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('flipLeft');
+        }else{
+            $(this).removeClass('flipLeft');
+        }
+    });
+    }
+    
+    // 画面をスクロールをしたら動かしたい場合の記述
+      $(window).scroll(function (){
+        fadeAnime();/* アニメーション用の関数を呼ぶ*/
+      });// ここまで画面をスクロールをしたら動かしたい場合の記述
+    
+    // ページが読み込まれたらすぐに動かしたい場合の記述
+      $(window).on('load', function(){
+        fadeAnime();/* アニメーション用の関数を呼ぶ*/
+      });// ここまでページが読み込まれたらすぐに動かしたい場合の記述
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <%#フッター-------------------------------%>
+    <footer>
+      corpyright Portfolio by nozomi hasei
+    </footer>
+  </div>
+  <script>
+  /**
+ * Written by Mineo Okuda on 01/03/18.
+ *
+ * Mineo Okuda - development + design
+ * https://willstyle.co.jp
+ * https://github.com/min30327
+ *
+ * MIT license.
+ */
+
+(function(root, factory) {
+	'use strict';
+
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define([], factory);
+	}
+	else if (typeof exports === 'object') {
+		// COMMONJS
+		module.exports = factory();
+	}
+	else {
+		// BROWSER
+		root.luxy = factory();
+	}
+}(this, function() {
+
+	'use strict';
+	
+		var defaults = {
+			wrapper: '#luxy',
+			targets : '.luxy-el',
+			wrapperSpeed: 0.08,
+			targetSpeed: 0.02,
+			targetPercentage: 0.1
+		};
+
+ 		var requestAnimationFrame = 
+			window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+			window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			window.requestAnimationFrame = requestAnimationFrame;
+		var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+		/**
+		 * Merge two or more objects. Returns a new object.
+		 * @param {Object}   objects  The objects to merge together
+		 * @returns {Object}          Merged values of defaults and options
+		 */
+		var extend = function () {
+
+			// Variables
+			var extended = {};
+			var deep = false;
+			var i = 0;
+			var length = arguments.length;
+
+			// Merge the object into the extended object
+			var merge = function (obj) {
+				for (var prop in obj) {
+					if (obj.hasOwnProperty(prop)) {
+						extended[prop] = obj[prop];
+					}
+				}
+			};
+
+			// Loop through each object and conduct a merge
+			for ( ; i < length; i++ ) {
+				var obj = arguments[i];
+				merge(obj);
+			}
+
+			return extended;
+
+		};
+
+		var Luxy = function(){
+			this.Targets = [];
+			this.TargetsLength = 0;
+			this.wrapper = '';
+			this.windowHeight = 0;
+			this.wapperOffset = 0;
+		};
+		Luxy.prototype = {
+			isAnimate: false,
+			isResize : false,
+			scrollId: "",
+			resizeId: "",
+			init : function(options){
+				this.settings = extend(defaults, options || {});
+				this.wrapper = document.querySelector(this.settings.wrapper);
+
+				if(this.wrapper==="undefined"){
+					return false;
+				}
+				this.targets = document.querySelectorAll(this.settings.targets);
+				document.body.style.height = this.wrapper.clientHeight + 'px';
+
+				this.windowHeight = window.clientHeight;
+				this.attachEvent();
+				this.apply(this.targets,this.wrapper);
+				this.animate();
+				this.resize();
+			},
+			apply : function(targets,wrapper){
+				this.wrapperInit();
+				
+				this.targetsLength = targets.length;
+				for (var i = 0; i < this.targetsLength; i++) {
+					var attr = {
+						offset : targets[i].getAttribute('data-offset'),
+						speedX : targets[i].getAttribute('data-speed-x'),
+						speedY : targets[i].getAttribute('data-speed-Y'),
+						percentage : targets[i].getAttribute('data-percentage'),
+						horizontal : targets[i].getAttribute('data-horizontal')
+					};
+					this.targetsInit(targets[i],attr);
+				}
+			},
+			wrapperInit: function(){
+				this.wrapper.style.width = '100%';
+				this.wrapper.style.position = 'fixed';
+			},
+			targetsInit: function(elm,attr){
+				
+				this.Targets.push({
+					elm : elm,
+					offset : attr.offset ? attr.offset : 0,
+					horizontal : attr.horizontal ? attr.horizontal : 0,
+					top : 0,
+					left : 0,
+					speedX : attr.speedX ? attr.speedX : 1,
+					speedY : attr.speedY ? attr.speedY : 1,
+					percentage :attr.percentage ? attr.percentage : 0
+				});
+			},
+			scroll : function(){
+				var scrollTopTmp = document.documentElement.scrollTop || document.body.scrollTop;
+				this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var offsetBottom = this.scrollTop + this.windowHeight;
+				this.wrapperUpdate(this.scrollTop);
+				for (var i = 0; i < this.Targets.length; i++) {
+					this.targetsUpdate(this.Targets[i]);
+				}
+			},
+			animate : function(){
+				this.scroll();
+				this.scrollId = requestAnimationFrame(this.animate.bind(this));
+			},
+			wrapperUpdate : function(){
+				
+				this.wapperOffset += (this.scrollTop - this.wapperOffset) * this.settings.wrapperSpeed;
+				this.wrapper.style.transform = 'translate3d(' + 0 + ',' +  Math.round(-this.wapperOffset* 100) / 100 + 'px ,' + 0 + ')';
+			},
+			targetsUpdate : function(target){
+				target.top += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedY) - target.top) * this.settings.targetPercentage;
+				target.left += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedX) - target.left) * this.settings.targetPercentage;
+				var targetOffsetTop = ( parseInt(target.percentage) - target.top - parseInt(target.offset) );
+				var offsetY = Math.round(targetOffsetTop * -100) / 100;
+				var offsetX = 0;
+				if(target.horizontal){
+					var targetOffsetLeft = ( parseInt(target.percentage) - target.left - parseInt(target.offset) );
+					offsetX = Math.round(targetOffsetLeft * -100) / 100;
+				}
+				target.elm.style.transform = 'translate3d(' + offsetX + 'px ,' + offsetY + 'px ,' + 0 +')';
+			},
+			resize: function(){
+				var self = this;
+				self.windowHeight = (window.innerHeight || document.documentElement.clientHeight || 0);
+				if( parseInt(self.wrapper.clientHeight) != parseInt(document.body.style.height)){
+					document.body.style.height = self.wrapper.clientHeight + 'px';
+				}
+				self.resizeId = requestAnimationFrame(self.resize.bind(self));
+			},
+			attachEvent : function(){
+				var self = this;
+				window.addEventListener('resize',function(){
+					if(!self.isResize){
+						cancelAnimationFrame(self.resizeId);
+						cancelAnimationFrame(self.scrollId);
+						self.isResize = true;
+						setTimeout(function(){
+							self.isResize = false;
+							self.resizeId = requestAnimationFrame(self.resize.bind(self));
+							self.scrollId = requestAnimationFrame(self.animate.bind(self));
+						},200);
+					}
+				});
+				
+			}
+		};
+
+		
+		var luxy = new Luxy();
+
+		return luxy;
+	})
+);
+  </script>
+  <script>
+    if(matchMedia('(min-width: 768px)').matches){
+      luxy.init();
+     } 
+  </script>
+  </body>
