@@ -209,35 +209,26 @@ In charge, product listing and inventory management on Isetan EC</p>
         }
     });
     }
-    
-    // 画面をスクロールをしたら動かしたい場合の記述
+  
       $(window).scroll(function (){
-        fadeAnime();/* アニメーション用の関数を呼ぶ*/
-      });// ここまで画面をスクロールをしたら動かしたい場合の記述
-    
-    // ページが読み込まれたらすぐに動かしたい場合の記述
+        fadeAnime();/
+      });
+  
       $(window).on('load', function(){
-        fadeAnime();/* アニメーション用の関数を呼ぶ*/
-      });// ここまでページが読み込まれたらすぐに動かしたい場合の記述
+        fadeAnime();
+      });
     </script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    
     <%#フッター-------------------------------%>
     <footer>
       corpyright Portfolio by nozomi hasei
     </footer>
   </div>
-  <script>
-  /**
- * Written by Mineo Okuda on 01/03/18.
- *
- * Mineo Okuda - development + design
- * https://willstyle.co.jp
- * https://github.com/min30327
- *
- * MIT license.
- */
 
+  <script>
 (function(root, factory) {
 	'use strict';
 
@@ -426,9 +417,11 @@ In charge, product listing and inventory management on Isetan EC</p>
 	})
 );
   </script>
+
   <script>
     if(matchMedia('(min-width: 768px)').matches){
       luxy.init();
      } 
   </script>
-  </body>
+
+</body>
