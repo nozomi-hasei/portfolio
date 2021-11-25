@@ -23,6 +23,7 @@ h1{
   color: rgb(182, 182, 182);
 }
 
+
 .wrap{
   max-height: 500px;
 }
@@ -59,7 +60,7 @@ h2{
 /*1,3目写真の文章*/
 .area .box{
   position:absolute;
-  top:-10%;
+  top:0;
   left: inherit;
   left: 50%;
   padding:20px;
@@ -406,3 +407,15 @@ hr{
   background:linear-gradient(90deg, rgba(37,180,10,0.1)0%,rgb(41, 95, 86)50%,rgba(37,180,10,0.1)100%);
 }
 
+.skill img{  
+  max-height: 100px;
+  max-width: 100px;
+  
+}
+
+.skill ul{
+  max-height: 500px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
