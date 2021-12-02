@@ -4,7 +4,7 @@ body{
 }
 
 section{
-  height: 350px;
+  height: 450px;
 }
 
 p{
@@ -25,7 +25,7 @@ h1{
 
 
 .wrap{
-  max-height: 500px;
+  max-height: 600px;
 }
 
 h2{
@@ -46,7 +46,7 @@ h2{
 /*1,3目写真*/
 .area figure{
   position:relative;
-  left:0;
+  left:0%;
   top:10px;
   width:0%;
   line-height: 0;
@@ -60,7 +60,7 @@ h2{
 /*1,3目写真の文章*/
 .area .box{
   position:absolute;
-  top:0;
+  top:-10%;
   left: inherit;
   left: 50%;
   padding:20px;
@@ -72,7 +72,7 @@ h2{
 .area:nth-child(2n) .box{
   left:inherit;
   right:51%;
-  top:-10%;
+  top:-25%;
 }
 
 
@@ -407,6 +407,10 @@ hr{
   background:linear-gradient(90deg, rgba(37,180,10,0.1)0%,rgb(41, 95, 86)50%,rgba(37,180,10,0.1)100%);
 }
 
+.skill{
+  max-height: 600px;
+}
+
 .skill img{  
   max-height: 100px;
   max-width: 100px;
@@ -414,8 +418,17 @@ hr{
 }
 
 .skill ul{
-  max-height: 500px;
+  max-height: 200px;
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+/*CONTACT FORM CSS*/
+form{
+  display: block;
+}
+
+section .area .skill2{
+  max-height: 200px;
 }
