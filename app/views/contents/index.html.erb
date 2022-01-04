@@ -13,8 +13,7 @@
               <ul>
                 <li><%= link_to 'TOP', contents_path %></li>
                 <li><%= link_to "ABOUT", :anchor => 'about' %></li>
-                <li><%= link_to "SKILL", { anchor: "skill" } %></li>
-                <li><%= link_to 'WORK' %></li>
+                <li><%= link_to "ORIGINAL APP", { anchor: "skill" } %></li>
                 <li><%= link_to 'PHOTO' %></li>
                 <li><%= link_to 'CONTACT' %></li>
               </ul>
@@ -33,7 +32,7 @@
             }else{
               $('#header').removeClass('fixed');
             }
-        }
+        };
         $('#g-navi a').click(function () {
           var elmHash = $(this).attr('href');
           var pos = Math.round($(elmHash).offset().top-120);
@@ -81,17 +80,21 @@
         <figure class="luxy-el" data-speed-x="5" data-offset="5"><img src="/assets/IMG_5920.JPG" alt=""></figure>
         <div class="box luxy-el" data-speed-y="5">
           <h2>長谷井 望 / NOZOMI HASEI</h2>
+          <hr>
             <p>1999年9月2日生まれ、岡山県出身</p>
             <p>父親の仕事の関係で、学生時代は転勤が日常で日本の様々な場所で生活。</p>
             <p>そのような経験や人とのつながりはかけがえのないものであり、私自身の強みです。<p> 
             <p>岡山学芸館高等学校：強化部活動のサッカー部にて心身を鍛え、勉強との両立に励む。</p>
             <p>駒澤大学 法学部：ゼミにて取調べの可視化や外国人の人権を学び、議論を行なった。</p>
-            <hr>
-            <p>Born in 1993, September 2, Okayama prefecture</p>
-            <p>Due to my father's work, when I was a student, I was transferred every day and lived in various places in Japan.</p>
-            <p>Such experiences and connections with people are irreplaceable and my own strength.</p>
-            <p>Okayama Gakugeikan High School: I trained my mind and body in the soccer club, which is an activity of the strengthening club, and worked hard to balance my studies.</p>
-            <p>Faculty of Law, Komazawa University: Visualization of interrogation and human rights of foreigners were learned and discussed at seminars.</p>
+            <b><p><span class="line">プログラミングに興味を持ったキッカケ</span></p></b>
+            <p>アパレル業界にて高級紳士服の販売業務やSNS・百貨店EC運営業務を担当する中で、WEBアプリケーションに触れる機会が増えました。</p>
+            <p>『どうすればより使いよすくなるか』『どうすればお客様の興味関心を引くことが出来るのか』などサービスを提供する側の視点になったことが、プログラミングに興味を持ったキッカケです。</p>
+            <b><p><span class="line">プログラミングの学習</span></p></b>
+            <p>プロゲートや参考本を活用した勉強から開始し、実際に現場に出た時の質問方法やコードの書き方だけではなくアプリ
+            の制作工程を仕事の合間時間を活用し出来るスクール（テックキャンプ）を選びました。</p>
+            <p>プログラミング学習はプログラマーになるための学習であると考えていたが、エラーが起きれば必ずプログラムが動かず、解決するための確認・修正の作業はどんな業務にも通ずる点で、学習
+            を通して問題解決する意識や力を伸ばすことも出来たと感じる。</P>
+            
         </div>
         <script>
           window.onscroll = function(){
@@ -112,86 +115,75 @@
         <figure class="luxy-el"data-speed-x="5" data-offset="5"><img src="/assets/IMG_4463.JPG" alt=""></figure>
         <div class="box luxy-el" data-speed-y="5">
           <h2>セールスパーソン / SALES PERSON</h2>
+          <hr>
             <p>株式会社 リングヂャケット （2016年〜）</p>
             <p>所属部署：ストアセールス１新宿</p>
             <p>国内自社工場にて生産している高級紳士服の販売、店舗運営を行う。</p>
             <p>また店舗代表者として全社会議への参加、企画提案などを行い企業活動に貢献。</p>
             <P>SNS(Instagram / YouTube)撮影・編集・運営。
 担当、伊勢丹ECへの商品掲載・在庫管理担当<p>
-            <hr>
-            <p>RING JACKET Co.,Ltd. (2016~)</p>
-            <P>Department：STORE SALES Ⅰ SHINJUKU</p> 
-            <p>Selling and operating stores for high-end men's clothing produced at our own factories in Japan.</p>
-            <p>Also, as a store representative, contribute to corporate activities by participating in company-wide meetings and making planning proposals.</p>
-            <p>SNS (Instagram / YouTube) shooting・editing・operation
-In charge, product listing and inventory management on Isetan EC.</p>
         </div>
       </section>
 
       <section class="area">
-        <figure class="luxy-el"data-speed-x="5" data-offset="5"><img src="/assets/IMG_0549.JPG" alt=""></figure>
+        <figure class="luxy-el"data-speed-x="5" data-offset="5"><img src="/assets/IMG_2166.png" alt=""></figure>
+        <div class="box luxy-el" data-speed-y="5">
+          <h2> / SNS </h2>
+          <hr>
+            <p>株式会社 リングヂャケット （2016年〜）</p>
+            <p>所属部署：ストアセールス１新宿</p>
+            <p>国内自社工場にて生産している高級紳士服の販売、店舗運営を行う。</p>
+            <p>また店舗代表者として全社会議への参加、企画提案などを行い企業活動に貢献。</p>
+            <P>SNS(Instagram / YouTube)撮影・編集・運営担当、伊勢丹ECへの商品掲載・在庫管理担当<p>
+        </div>
+      </section>
+        
+      <section class="area">
+        <figure class="luxy-el" data-speed-x="5" data-offset="5"><img src="/assets/IMG_0549.JPG" alt=""></figure>
         <div class="box luxy-el" data-speed-y="5">
           <h2>フォトグラファー & 動画クリエイター / PHOTOGRAPHER ＆ Video creator</h2>
+          <hr>
             <p>現職での業務で写真や動画に触れる機会が増え、スキルの深堀を行う。</p>
             <p>写真は主に自社製品の商品撮影、スナップ撮影、他社様の宣材写真の撮影を経験。</p>
             <p>動画はYouTube、百貨店HPへのイベント告知動画などの制作を経験。</p>
             <p>プライベートでも旅行などで撮影を行い、思い出に残すのが好きです。</p>
-            <hr>
-            <p>I have more opportunities to come into contact with photos and videos in my current job, and I started to deepen my skills.</p>
-            <p>Photographs are mainly experienced in product photography of in-house products, snapshot photography, and photography of other companies' publicity materials.</p>
-            <p>Experienced producing videos such as YouTube and event announcement videos to department store websites.</p>
-            <p>Even in private, I like to take pictures on trips and leave them in my memory.</p>
         </div>
       </section>
-        
-      <%#<section class="area">
-        <figure class="luxy-el" data-speed-x="5" data-offset="5"><img src="/assets/IMG_4463.JPG" alt=""></figure>
-        <div class="box luxy-el" data-speed-y="5">
-          <h2>Area4</h2>
-            <p></p>
+
+    <%#ORIGINAL APPスタート--------------------------------------%>
+      <h1>ORIGINAL APP</h1>
+        <div class="original-box">
+          <div class="original-in">
+            <a href="https://ringjacket.herokuapp.com/"><img src="/assets/RINGJACKET.jpg" alt=""></a>
+            <b><p><span class="line">オンライン版ご紹介カード発行アプリ</span></p></b>
+            <p>制作の背景</p>
+          </div>
         </div>
-      </section>%>
 
-    <%#SKILLスタート--------------------------------------%>
-    <section class="area" id="skill2">
-      <h1>SKILL</h1>
-        <div class="skill">
-          <ul>
-            <li><img src="/assets/308440_front-end_html_long shadow_markup language_technologies_icon.jpg" alt=""><li>
-              <p>簡単なWEB構築を行う事ができる</p>
-            <li><img src="/assets/308436_css_front-end_long shadow_web_web technology_icon.jpg" alt=""><li>
-              <p>簡単なWEB構築を行う事ができる</p>
-          </ul>
+        <div class="original-box">
+          <div class="original-in">
+            <img src="/assets/308440_front-end_html_long shadow_markup language_technologies_icon.jpg" alt="">             
+            <p>簡単なWEB構築を行う事ができる</p>
+          </div>
         </div>
-    </section>
-
-    <section class="area">
-      <div class="skill">
-        <ul>
-          <li><img src="/assets/308441_front-end_javascript_js_long shadow_markup language_icon.jpg" alt=""><li>
-            <p>jqueryのフレームワーク</p>
-            <p>Reactの勉強に力を入れています。</p>
-          <li><img src="/assets/241916_logo_adobe_premiere_icon.jpg" alt=""><li>
-            <p>動画編集を一貫して行える</p>
-            <p>YouTube、イメージ映像など</p>
-        </ul>
-      </div>
-    </section>
-
-    <section class="area">
-      <div class="skill">
-        <ul>
-          <li><img src="/assets/241917_lightroom_adobe_logo_icon.jpg" alt=""><li>
-          <li><img src="/assets/241928_logo_adobe_photoshop_icon.jpg" alt=""><li>
-        </ul>
-      </div>
-    </section>
-
     
-    <%#WORKスタート--------------------------------------%>
-    <div class="wrap" id="about">
-      <h1>WORK</h1>
-    </div>
+    <%#SKILLスタート--------------------------------------%>
+      <h1>SKILL</h1>
+        <div class="skill-box">
+          <div class="skill-in">
+            <img src="/assets/2674067_essential_object_responsive_ui_web_icon.jpg" alt="">              <p>簡単なWEB構築を行う事ができる</p>
+            <img src="/assets/308436_css_front-end_long shadow_web_web technology_icon.jpg" alt="">
+            <p>簡単なWEB構築を行う事ができる</p>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-in">
+            <img src="/assets/308440_front-end_html_long shadow_markup language_technologies_icon.jpg" alt="">              <p>簡単なWEB構築を行う事ができる</p>
+            <img src="/assets/308436_css_front-end_long shadow_web_web technology_icon.jpg" alt="">
+            <p>簡単なWEB構築を行う事ができる</p>
+          </div>
+        </div>
 
 
 
@@ -263,7 +255,7 @@ In charge, product listing and inventory management on Isetan EC.</p>
       });
   
       $(window).on('load', function(){
-        fadeAnime();
+        fadeAnime();/
       });
     </script>
 

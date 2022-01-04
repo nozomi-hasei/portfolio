@@ -4,7 +4,7 @@ body{
 }
 
 section{
-  height: 450px;
+  height: 700px;
 }
 
 p{
@@ -25,7 +25,7 @@ h1{
 
 
 .wrap{
-  max-height: 600px;
+  max-height: 300px;
 }
 
 h2{
@@ -41,7 +41,7 @@ h2{
   position:relative;
   margin:0 auto 25% auto;
   max-width: 100%;
-  max-height: 1000PX;
+  max-height: 500PX;
 }
 /*1,3目写真*/
 .area figure{
@@ -60,7 +60,7 @@ h2{
 /*1,3目写真の文章*/
 .area .box{
   position:absolute;
-  top:-10%;
+  top:0%;
   left: inherit;
   left: 50%;
   padding:20px;
@@ -72,7 +72,7 @@ h2{
 .area:nth-child(2n) .box{
   left:inherit;
   right:51%;
-  top:-25%;
+  top:-10%;
 }
 
 
@@ -407,21 +407,51 @@ hr{
   background:linear-gradient(90deg, rgba(37,180,10,0.1)0%,rgb(41, 95, 86)50%,rgba(37,180,10,0.1)100%);
 }
 
-.skill{
-  max-height: 600px;
+.original-box{
+  height: 400px;
 }
 
-.skill img{  
-  max-height: 100px;
-  max-width: 100px;
-  
-}
-
-.skill ul{
-  max-height: 200px;
-  max-width: 100%;
+.original-in{
   display: flex;
   justify-content: space-around;
+}
+
+
+.original-in img{
+  height: 400px;
+  width: 600px;
+}
+
+.skill-box{
+  height: 400px;
+}
+
+.skill-in{
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-in img{
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.skill-in img:after{
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 
+    inset 0 0 20px black,
+    inset 0 0 20px #fff,
+    inset 0 0 20px black,
+    inset 0 0 2opx black;
 }
 
 /*CONTACT FORM CSS*/
@@ -432,3 +462,6 @@ form{
 section .area .skill2{
   max-height: 200px;
 }
+
+.line{
+  text-decoration: underline double rgb(227, 213, 162);}
