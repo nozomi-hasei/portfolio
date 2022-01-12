@@ -4,7 +4,7 @@ body{
 }
 
 section{
-  height: 700px;
+  height: 300px;
 }
 
 p{
@@ -13,7 +13,7 @@ p{
 }
 
 img{
-  max-width:900px;
+  max-width:800px;
   height:auto;
 }
 
@@ -42,21 +42,21 @@ h2{
 /*写真と文章*/
 .area{
   position:relative;
-  margin:0 auto 25% auto;
+  margin:0 auto 20% auto;
   max-width: 100%;
-  max-height: 700PX;
+  max-height: 500PX;
 }
 /*1,3目写真*/
 .area figure{
   position:relative;
-  left:0%;
+  left:5%;
   top:10px;
   width:100%;
   line-height: 0;
 }
 
 .area:nth-child(2n) figure{
-  left:40%;
+  left:45%;
   top:auto;
   width: 100%;
   height: 700px;
@@ -68,7 +68,7 @@ h2{
   top:0%;
   left: inherit;
   left: 50%;
-  padding:20px;
+  padding:10px;
   box-shadow: 0 0 40px rgba(0,0,0,0.1);
   background-color: rgb(0, 0, 0);
 }
