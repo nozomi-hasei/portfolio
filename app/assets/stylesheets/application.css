@@ -17,6 +17,10 @@ img{
   height:auto;
 }
 
+header{
+  margin-top: 1%;
+}
+
 h1{
   text-align: center;
   font-size:1.7rem;
@@ -26,6 +30,8 @@ h1{
 
 .wrap{
   max-height: 200px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 h2{
@@ -55,18 +61,19 @@ h2{
   line-height: 0;
 }
 
+/*2,4目写真*/
 .area:nth-child(2n) figure{
   left:45%;
   top:auto;
   width: 100%;
-  height: 700px;
+  height: 500px;
 }
 
 /*1,3目写真の文章*/
 .area .box{
   position:absolute;
   top:0%;
-  left: inherit;
+  right: 5%;
   left: 50%;
   padding:10px;
   box-shadow: 0 0 40px rgba(0,0,0,0.1);
@@ -75,7 +82,7 @@ h2{
 
 /*２目写真の文章*/
 .area:nth-child(2n) .box{
-  left:inherit;
+  left: 5%;
   right:41%;
   top:-10%;
 }
@@ -412,53 +419,30 @@ hr{
   background:linear-gradient(90deg, rgba(255, 255, 255, 0)0%,rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
 }
 
-.original-box{
-  height: 400px;
+.app-box1{
+  height: 1500px;
 }
 
-.original-in{
-  display: flex;
-  justify-content: space-around;
-}
-
-
-.original-in img{
-  height: 400px;
-  width: 600px;
-}
-
-.skill-box{
-  height: 400px;
-  background-color: #fff;
-}
-
-.skill-in{
-  display: flex;
-  justify-content: space-around;
-}
-
-.skill-in img{
-  display: inline-block;
-  position: relative;
-  height: 200px;
-  width: 200px;
-}
-
-.skill-in img:after{
-  position: absolute;
+.app-box2 img{
   display: block;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 
-    inset 0 0 20px black,
-    inset 0 0 20px #fff,
-    inset 0 0 20px black,
-    inset 0 0 2opx black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1);
 }
+
+@keyframes img-wrap {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+
 
 /*CONTACT FORM CSS*/
 form{
@@ -469,6 +453,8 @@ section .area .skill2{
   max-height: 200px;
 }
 
+
+/*リセット CSS*/
 .line{
   text-decoration: underline double rgb(227, 213, 162);
 }
