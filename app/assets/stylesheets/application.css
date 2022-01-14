@@ -17,6 +17,15 @@ img{
   height:auto;
 }
 
+.area:hover img{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.app-box1:hover img{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
 
 header{
   margin-top: 1%;
@@ -462,6 +471,10 @@ hr{
   justify-content: space-around;
   margin-top: 5%;
   height: 400px;
+}
+
+.app-word1{
+  
 }
 
 /*CONTACT FORM CSS*/
