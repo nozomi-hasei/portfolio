@@ -18,13 +18,13 @@ img{
 }
 
 .area:hover img{
-  transform: scale(1.2);
-  transition-duration: 0.5s;
+  transform: scale(1.1);
+  transition-duration: 0.7s;
 }
 
 .app-box1:hover img{
   transform: scale(1.1);
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
 }
 
 .area .luxy-el img{
@@ -56,7 +56,7 @@ h3{
   position: relative;
   display: inline-block;
   padding: 0 55px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -67,8 +67,8 @@ h3:before, h3:after {
   display: inline-block;
   width: 45px;
   height: 4px;
-  border-top: solid 1px rgb(0, 0, 0);
-  border-bottom: solid 1px rgb(0, 0, 0);
+  border-top: solid 1px rgb(255, 255, 255);
+  border-bottom: solid 1px rgb(255, 255, 255);
 }
 
 h3:before {
@@ -76,6 +76,10 @@ h3:before {
 }
 h3:after {
   right: 0;
+}
+
+h4{
+  color: rgb(255, 255, 255);
 }
 
 .wrap{
@@ -127,6 +131,56 @@ h3:after {
   right:41%;
   top:-10%;
 }
+
+
+/*=========ORIGINAL APP=========*/
+
+.app-box1{
+  height: 1500px;
+}
+
+.app-box2 img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow: 15px 15px 0px 0 rgb(69, 69, 69);
+
+}
+
+
+.app-word{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  height: 300px;
+  margin-top: 5%;
+}
+
+.app-word1{
+  width: 40%;
+  text-align: center;
+}
+
+.app-word1 p{
+  color: #ffffff;
+}
+
+.app-word1 h3{
+  font-size: 25px;
+}
+
+/*=========CONTACT FORM CSS=========*/
+form{
+  display: block;
+}
+
+section .area .skill2{
+  max-height: 200px;
+}
+
 
 /*=========Footer=========*/
 
@@ -457,55 +511,6 @@ hr{
   background:linear-gradient(90deg, rgba(255, 255, 255, 0)0%,rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
 }
 
-
-/*=========ORIGINAL APP=========*/
-
-.app-box1{
-  height: 1500px;
-}
-
-.app-box2 img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  max-width: 500px;
-  max-height: 500px;
-  box-shadow: 15px 15px 0px 0 rgb(69, 69, 69);
-
-}
-
-
-.app-word{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5%;
-  height: 300px;
-}
-
-.app-word1{
-  background-color: rgb(255, 255, 255);
-  width: 40%;
-  text-align: center;
-  box-shadow:
-  0 1.9px 2.5px rgba(0, 0, 0, 0.057),
-  0 5px 6.1px rgba(0, 0, 0, 0.076),
-  0 10.1px 11.4px rgba(0, 0, 0, 0.086),
-  0 19.2px 19.8px rgba(0, 0, 0, 0.092),
-  0 38.4px 34.8px rgba(0, 0, 0, 0.1),
-  0 101px 74px rgba(173, 173, 173, 0.13);
-}
-
-
-
-/*CONTACT FORM CSS*/
-form{
-  display: block;
-}
-
-section .area .skill2{
-  max-height: 200px;
-}
 
 
 /*リセット CSS*/
