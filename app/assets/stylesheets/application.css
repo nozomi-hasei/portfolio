@@ -15,6 +15,7 @@ p{
 img{
   max-width:800px;
   height:auto;
+  box-shadow: 15px 15px 0px 0 rgba(67, 134, 112, 0.731);
 }
 
 .area:hover img{
@@ -26,6 +27,7 @@ img{
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
+
 
 header{
   margin-top: 1%;
@@ -52,7 +54,7 @@ h3{
   position: relative;
   display: inline-block;
   padding: 0 55px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -63,8 +65,8 @@ h3:before, h3:after {
   display: inline-block;
   width: 45px;
   height: 4px;
-  border-top: solid 1px rgb(255, 255, 255);
-  border-bottom: solid 1px rgb(255, 255, 255);
+  border-top: solid 1px rgb(0, 0, 0);
+  border-bottom: solid 1px rgb(0, 0, 0);
 }
 
 h3:before {
@@ -81,7 +83,7 @@ h3:after {
 }
 
 
-/*写真と文章*/
+/*=========写真と文章=========*/
 .area{
   position:relative;
   margin:0 auto 20% auto;
@@ -114,6 +116,7 @@ h3:after {
   padding:10px;
   box-shadow: 0 0 40px rgba(0,0,0,0.1);
   background-color: rgb(0, 0, 0, 0.85);
+  box-shadow: 15px 15px 0px 0 rgba(67, 134, 112, 0.731);
 }
 
 /*２目写真の文章*/
@@ -123,7 +126,7 @@ h3:after {
   top:-10%;
 }
 
-/*Footer*/
+/*=========Footer=========*/
 
 footer{
   width:100%;
@@ -391,9 +394,7 @@ opacity: 0;
 }
 
 
-/*==================================================
-ギャラリーのためのcss
-===================================*/
+/*=========ギャラリーのためのcss=======*/
 .gallery{
   columns: 4;/*段組みの数*/
   padding:0 15px;/*ギャラリー左右に余白をつける*/
@@ -454,6 +455,9 @@ hr{
   background:linear-gradient(90deg, rgba(255, 255, 255, 0)0%,rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
 }
 
+
+/*=========ORIGINAL APP=========*/
+
 .app-box1{
   height: 1500px;
 }
@@ -463,6 +467,10 @@ hr{
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow: 15px 15px 0px 0 rgb(69, 69, 69);
+
 }
 
 
@@ -470,11 +478,17 @@ hr{
   display: flex;
   justify-content: space-around;
   margin-top: 5%;
-  height: 400px;
+  height: 300px;
 }
 
 .app-word1{
-  
+  background-color: rgba(85, 85, 85, 0.142);
+
+
+}
+
+.app-word2{
+  background-color: rgb(83, 83, 83);
 }
 
 /*CONTACT FORM CSS*/
