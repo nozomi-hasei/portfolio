@@ -180,7 +180,9 @@
 
 
     <%#SKILLスタート--------------------------------------%>
+    <div class="skill-wrap">
       <h1>SKILL</h1>
+    </div>
         <div class="skill-box">
           <div class="skill-in">
             <img src="/assets/1055104_browser_webpage_website_icon.png" alt=""><p>フロントエンドはHTML&CSS、JavaScriptJavaScriptを用いた開発が出来ます</p>
@@ -202,9 +204,9 @@
 
 
     <%#PHOTOスタート--------------------------------------%>
-
+  <div class="photo-wrap">
     <h1>PHOTO</h1>
-
+  </div>
     <div class="wrapper">
       <ul class="gallery">
         <li><a href="/assets/IMG_5887.JPG" data-lightbox="gallery1" data-title="Sanson Terrace(Sakuho Town, Minamisaku District, Nagano Prefecture)/山村テラス(長野県南佐久郡佐久穂町)"><img src="assets/IMG_5887.JPG" alt=""></a></li>
@@ -275,18 +277,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     
     <%#CONTACTスタート--------------------------------------%>
-    <h1>CONTACT FORM</h1>
-    <div class="contact">
-        <%= form_with(model: @content, local: true) do |form| %>
-          <%= form.text_field :title, placeholder: "title" %>
-          <%= form.text_area :text, placeholder: "text", rows: "10" %>
-          <%= form.text_field :image, placeholder: "Image Url" %>
-          <%= form.submit "SEND" %>
-        <% end %>
+    <div class="contact-wrap">
+      <h1>CONTACT FORM</h1>
     </div>
+    <%= form_with(model: @content, local: true) do |form| %>
+      <div class="contact">
+        <%= form.text_field :title, placeholder: "title", class:'form-title' %>
+      </div>
+      <div class="contact">
+        <%= form.text_field :image, placeholder: "Image Url", class:'form-image' %>
+      </div>
+      <div class="contact">
+        <%= form.text_area :text, placeholder: "text", rows: "10", class:'form-text' %>
+      </div>
+      <div class="contact">
+        <%= form.submit "SEND", class: 'form-submit'  %>
+      </div>
+    <% end %>
+
     <%#フッター---------------------------------------------%>
     <footer>
-      corpyright Portfolio by nozomi hasei
+      <div class="footer-area">
+        Copyright Portfolio by nozomi hasei (2022)
+      </div>
     </footer>
   </div>
 
@@ -486,4 +499,4 @@
      } 
   </script>
 
-</body>z
+</body>
