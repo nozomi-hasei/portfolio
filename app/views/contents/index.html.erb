@@ -282,13 +282,19 @@
     </div>
     <%= form_with(model: @content, local: true) do |form| %>
       <div class="contact">
-        <%= form.text_field :title, placeholder: "title", class:'form-title' %>
+        <%= form.text_field :title, placeholder: "COMPANY", class:'form-company' %>
       </div>
       <div class="contact">
-        <%= form.text_field :image, placeholder: "Image Url", class:'form-image' %>
+        <%= form.text_field :image, placeholder: "NAME", class:'form-name' %>
       </div>
       <div class="contact">
-        <%= form.text_area :text, placeholder: "text", rows: "10", class:'form-text' %>
+        <%= form.text_field :title, placeholder: "E-MAIL", class:'form-e-mail' %>
+      </div>
+      <div class="contact">
+        <%= form.text_area :text, placeholder: "MESSAGE", rows: "10", class:'form-message' %>
+      </div>
+      <div class="contact" id="contact-ward">
+        <p>*お返事させていただくまでに、お時間を要する場合がございます。</p>
       </div>
       <div class="contact">
         <%= form.submit "SEND", class: 'form-submit'  %>
