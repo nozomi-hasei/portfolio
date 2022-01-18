@@ -280,18 +280,18 @@
     <div class="contact-wrap">
       <h1>CONTACT FORM</h1>
     </div>
-    <%= form_with(model: @content, local: true) do |form| %>
+    <%= form_with model: @content, url: contents_path,local: true, method: :post do |form| %>
       <div class="contact">
-        <%= form.text_field :title, placeholder: "COMPANY", class:'form-company' %>
+        <%= form.text_field :company, placeholder: "COMPANY", class:'form-company' %>
       </div>
       <div class="contact">
-        <%= form.text_field :image, placeholder: "NAME", class:'form-name' %>
+        <%= form.text_field :name, placeholder: "NAME", class:'form-name' %>
       </div>
       <div class="contact">
-        <%= form.text_field :title, placeholder: "E-MAIL", class:'form-e-mail' %>
+        <%= form.text_field :e_mail, placeholder: "E-MAIL", class:'form-e-mail' %>
       </div>
       <div class="contact">
-        <%= form.text_area :text, placeholder: "MESSAGE", rows: "10", class:'form-message' %>
+        <%= form.text_area :message, placeholder: "MESSAGE", class:'form-message' %>
       </div>
       <div class="contact" id="contact-ward">
         <p>*お返事させていただくまでに、お時間を要する場合がございます。</p>
