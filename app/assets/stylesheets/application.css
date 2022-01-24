@@ -9,7 +9,7 @@ section{
 
 p{
   color: rgb(182, 182, 182);
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 img{
@@ -37,12 +37,12 @@ header{
 
 h1{
   text-align: center;
-  font-size:1.7rem;
+  font-size:3.5rem;
   color: rgb(182, 182, 182);
 }
 
 h2{
-  font-size:1.7rem;
+  font-size:2.5rem;
   letter-spacing: 3px;
   text-align: center;
   margin:0 0 30px 0;
@@ -94,7 +94,7 @@ h4{
   position:relative;
   margin:0 auto 20% auto;
   max-width: 100%;
-  max-height: 900PX;
+  max-height: 1000PX;
 }
 
 
@@ -113,16 +113,16 @@ h4{
   top:0%;
   right: 5%;
   left: 50%;
-  padding:10px;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 7px 7px 0px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 0px 0 #00000033;
 }
 
 /*２目写真の文章*/
 .area:nth-child(2n) .box{
   left: 5%;
   right:41%;
-  top:-10%;
+  top:-30%;
 }
 
 
@@ -256,7 +256,7 @@ h2{
 }
   
 .area:nth-child(2n) figure {
-    
+    left: 0;
 }
   
 .area figure{
