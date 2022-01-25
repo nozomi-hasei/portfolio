@@ -163,6 +163,18 @@ h4{
   font-size: 25px;
 }
 
+/*=========SKILL CSS=========*/
+
+.skill-box{ 
+  display: flex;
+  justify-content: space-around;
+}
+
+video{
+  height: 500PX;
+  width: 500PX;
+}
+
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
