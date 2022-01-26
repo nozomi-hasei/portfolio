@@ -12,6 +12,17 @@ p{
   font-size: 1.5rem;
 }
 
+.top-photo-font p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+
+
 img{
   max-width:1000px;
   height:auto;
@@ -449,6 +460,9 @@ opacity: 0;
   height: auto;
 }
 
+.img-wrap{
+  position: relative;
+}
 /*========= top画像1アニメーション ===============*/
 .img-wrap1 {
   overflow: hidden;
@@ -478,7 +492,6 @@ opacity: 0;
 /*========= top画像2アニメーション ===============*/
 .img-wrap2 {
   overflow: hidden;
-  position: relative;
   max-height: 450px;
 }
 
