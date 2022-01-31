@@ -12,11 +12,10 @@
             <h1>NOZOMI HASEI</h1>
               <ul>
                 <li><%= link_to 'TOP', contents_path %></li>
-                <li><a href="#anker1">ABOUT</a></li>
+                <li><%= link_to "photo",contents_path, class:"photo-wrap" %></li>
                 <li><%= link_to "ORIGINAL APP" %></li>
                 <li><%= link_to "ACHIEVMENT" %></li>
-                <li><%= link_to 'PHOTO' %></li>
-                <li><a href="#an">CONTACT</a></li>
+                <li><%= link_to "photo", '#photo' %></li>
               </ul>
           </div>
         </nav>
@@ -241,7 +240,7 @@
 
 
     <%#PHOTOスタート--------------------------------------%>
-  <div class="photo-wrap">
+  <div class="photo-wrap", id="photo">
     <h1>PHOTO</h1>
   </div>
     <div class="wrapper">
@@ -297,7 +296,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     
     <%#CONTACTスタート--------------------------------------%>
-    <div class="contact-wrap">
+    <div class="contact-wrap" id="contact">
       <h1>CONTACT FORM</h1>
     </div>
     <%= form_with model: @content, url: contents_path,local: true, method: :post do |form| %>
