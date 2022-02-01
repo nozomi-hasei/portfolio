@@ -126,13 +126,15 @@ h4{
   top:10px;
   width:100%;
   line-height: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 /*1,3目写真の文章*/
 .area .box{
-  position:absolute;
-  top:0%;
+  position: absolute;
+  top:30%;
   right: 5%;
   left: 50%;
   padding: 10px;
@@ -144,7 +146,7 @@ h4{
 .area:nth-child(2n) .box{
   left: 5%;
   right:41%;
-  top:-20%;
+  
 }
 
 
@@ -192,9 +194,22 @@ h4{
   justify-content: space-around;
 }
 
+ul.skill-photo li{
+  display: inline;
+}
+
+.skill-in{
+  height: 1000px;
+}
+
 video{
   height: 500PX;
   width: 500PX;
+}
+
+.skill-in img{
+  height: 330px;
+  width: 500px;
 }
 
 /*=========CONTACT FORM CSS=========*/
@@ -503,6 +518,7 @@ opacity: 0;
 /*========= top画像2アニメーション ===============*/
 .img-wrap2 {
   overflow: hidden;
+  position: relative;
   max-height: 450px;
 }
 
