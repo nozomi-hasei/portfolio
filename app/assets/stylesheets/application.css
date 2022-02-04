@@ -185,29 +185,27 @@ h4{
 
 /*=========SKILL CSS=========*/
 
-.skill-box{ 
-  display: flex;
-  justify-content: space-around;
+.container{ 
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  gap: 20px;
 }
 
-ul.skill-photo li{
-  display: inline;
+.item{
+  padding: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.skill-in{
-  height: 1000px;
+.container .item img {
+  height: 380px;
+  width: 550px;
 }
 
-video{
-  height: 500PX;
-  width: 500PX;
+.container .item video {
+  height: 380px;
+  width: 550px;
 }
-
-.skill-in img{
-  height: 330px;
-  width: 500px;
-}
-
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
