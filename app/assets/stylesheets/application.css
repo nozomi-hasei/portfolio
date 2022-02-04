@@ -184,28 +184,44 @@ h4{
 }
 
 /*=========SKILL CSS=========*/
-
 .container{ 
   display: grid;
-  grid-template-columns:  1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns:  1fr 1fr ;
+
 }
 
 .item{
-  padding: 10px;
-  margin-left: 0;
-  margin-right: 0;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item:hover img{
+  transform: scale(1.1);
+  transition-duration: 0.7s;
+}
+
+.item:hover video{
+  transform: scale(1.1);
+  transition-duration: 0.7s;
+}
+
+.item h2{
+  margin-top: 10%;
 }
 
 .container .item img {
-  height: 380px;
-  width: 550px;
+  height: auto;
+  width: 100%;
+
 }
 
 .container .item video {
-  height: 380px;
-  width: 550px;
+  height: auto;
+  width: 100%;
+
 }
+
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
