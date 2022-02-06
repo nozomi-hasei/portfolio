@@ -187,13 +187,13 @@ h4{
 .container{ 
   display: grid;
   grid-template-columns:  1fr 1fr ;
-
 }
 
 .item{
   background-color: black;
   margin-left: auto;
   margin-right: auto;
+  padding: 40px;
 }
 
 .item:hover img{
@@ -220,6 +220,12 @@ h4{
   height: auto;
   width: 100%;
 
+}
+
+#logo{
+  max-height: 40px;
+  max-width: 40px;
+  display: flex;
 }
 
 /*=========CONTACT FORM CSS=========*/
