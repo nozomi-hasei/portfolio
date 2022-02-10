@@ -162,7 +162,16 @@ h4{
   margin-right: auto;
 }
 
-
+.area .luxy-el #original{
+  position: absolute;
+  top:30%;
+  height: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  background-color: rgba(127, 128, 128, 0.715);
+  box-shadow: 7px 7px 0px 0 #00000033;
+}
 /*=========ORIGINAL APP=========*/
 
 .app-box1{
@@ -176,13 +185,6 @@ h4{
   margin-top: 5%;
   max-width: 500px;
   max-height: 500px;
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  filter: grayscale(0%);
-  transition:0.5s;
-  transition:0.5s;
 }
 
 .app-box2:hover img{
