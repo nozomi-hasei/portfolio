@@ -15,6 +15,17 @@ p{
 
 /*========= nav ===============*/
 
+.big-bg{
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+#home{
+  background-image: url("IMG_5918 4.JPG");
+  min-height: 100vh;
+}
+
 .page-header{
   display: flex;
   justify-content: space-between;
