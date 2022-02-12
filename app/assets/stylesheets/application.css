@@ -25,14 +25,16 @@ p{
 
 .main-nav{
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.20em;
   text-transform: uppercase;
-  margin-top: 20px;
   list-style: none;
 }
 
 .main-nav li{
-  margin-left: 36px;
+  margin:2% 34px;
 }
 
 .main-nav a{
@@ -42,12 +44,13 @@ p{
 
 .main-nav a:hover{
   color: gray;
+  text-decoration: line-through solid  rgba(112, 179, 128, 0.633);
 }
 
 /*========= top画像 ===============*/
 .top-photo img{
   max-width: 100%;
-  height: 450px;
+  height: 350px;
 }
 
 .img-wrap{
@@ -57,10 +60,10 @@ p{
 .img-wrap1 {
   overflow: hidden;
   position: relative;
-  max-height: 450px;
+  max-height: 350px;
   padding: 0 8% 0 8%;
-  filter: brightness(200%);
-  filter: opacity(50%);
+  filter: brightness(50%);
+  filter: opacity(70%);
   
 }
 
@@ -87,10 +90,10 @@ p{
 .img-wrap2 {
   overflow: hidden;
   position: relative;
-  max-height: 450px;
+  max-height: 350px;
   padding:0 8% 0 8%;
-  filter: brightness(200%);
-  filter: opacity(50%);
+  filter: brightness(50%);
+  filter: opacity(70%);
 }
 
 .img-wrap2:before {
@@ -169,12 +172,22 @@ img{
 
 h1{
   text-align: center;
-  font-size: 2.0rem;
+  font-size: 2.5rem;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
   letter-spacing: 0.15em;
   color: rgb(182, 182, 182);
 }
+
+body h1{
+  text-decoration: none;
+}
+
+body h1:hover{
+  color: gray;
+  text-decoration: line-through solid  rgba(112, 179, 128, 0.619);
+}
+
 
 h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
