@@ -2,66 +2,19 @@
   <div id="luxy">
   
     <%#ヘッダー--------------------------------------%>
-    <header id="header">
-      <h1>NOZOMI HASEI</h1>
-
-      <%#メニューバー---------------------------------%>
-      <div class="openbtn1"><span></span><span></span><span></span></div>
-        <nav id="g-nav">
-          <div id="g-nav-list">
-            <h1>NOZOMI HASEI</h1>
-              <ul>
-                <li><%= link_to 'TOP', contents_path %></li>
-                <li><%= link_to "ABOUT",contents_path, class:"photo-wrap" %></li>
-                <li><%= link_to "ORIGINAL APP" %></li>
-                <li><%= link_to "CONTENT" %></li>
-                <li><%= link_to "PHOTO", '#photo' %></li>
-              </ul>
-          </div>
-        </nav>
-      <div class="circle-bg"></div>
-      
-
-      <%#ヘッダー移動イベント-----------------------------%>
-      <script>
-        function FixedAnime() {   
-          var headerH = $('#header').outerHeight(true);
-          var scroll = $(window).scrollTop();
-          if (scroll >= headerH){
-              $('#header').addClass('fixed');
-            }else{
-              $('#header').removeClass('fixed');
-            }
-        };
-        $('#g-navi a').click(function () {
-          var elmHash = $(this).attr('href');
-          var pos = Math.round($(elmHash).offset().top-120);
-          $('body,html').animate({scrollTop: pos}, 500);
-          return false;
-        });
-        $(window).scroll(function () {
-          FixedAnime();
-        });
-        $(window).on('load', function () {
-          FixedAnime();
-        });
-      </script>
-
-      <%#メニューバーイベント------------------------------%>
-      <script>
-        $(".openbtn1").click(function () {
-          $(this).toggleClass('active');
-            $("#g-nav").toggleClass('panelactive');
-            $(".circle-bg").toggleClass('circleactive');
-        });
-
-        $("#g-nav a").click(function () {
-          $(".openbtn1").removeClass('active');
-            $("#g-nav").removeClass('panelactive');
-            $(".circle-bg").removeClass('circleactive');
-        });
-      </script>
-    </header>
+      <header class="page-header">
+        <h1>NOZOMI HASEI</h1>
+        <%#メニューバー---------------------------------%>
+          <nav>
+            <ul class="main-nav">
+              <li><%= link_to 'TOP', contents_path %></li>
+              <li><%= link_to "ABOUT",contents_path, class:"photo-wrap" %></li>
+              <li><%= link_to "ORIGINAL APP" %></li>
+              <li><%= link_to "CONTENT" %></li>
+              <li><%= link_to "PHOTO", '#photo' %></li>
+            </ul>
+          </nav>
+      </header>
 
     <%#topスタート----------------------------------------%>
     <div class="img-wrap">

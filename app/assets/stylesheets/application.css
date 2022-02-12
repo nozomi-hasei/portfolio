@@ -12,6 +12,98 @@ p{
   font-size: 150%;
 }
 
+
+/*========= nav ===============*/
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.main-nav{
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.main-nav li{
+  margin-left: 36px;
+}
+
+.main-nav a{
+  color: rgb(182, 182, 182);
+  text-decoration: none;
+}
+
+.main-nav a:hover{
+  color: gray;
+}
+
+/*========= top画像 ===============*/
+.top-photo img{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-wrap{
+  position: relative;
+}
+/*========= top画像1アニメーション ===============*/
+.img-wrap1 {
+  overflow: hidden;
+  position: relative;
+  max-height: 450px;
+}
+
+.img-wrap1:before {
+  animation: img-wrap1 1s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: rgb(0, 0, 0);
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap1 {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*========= top画像2アニメーション ===============*/
+.img-wrap2 {
+  overflow: hidden;
+  position: relative;
+  max-height: 450px;
+}
+
+.img-wrap2:before {
+  animation: img-wrap2 1s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: rgb(0, 0, 0);
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes img-wrap2 {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 .top-photo-font p{
   position: absolute;
   top: 50%;
@@ -68,7 +160,7 @@ img{
 
 h1{
   text-align: center;
-  font-size:2.5rem;
+  font-size: 2.0rem;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
   letter-spacing: 0.15em;
@@ -391,224 +483,6 @@ h2{
 }
 }
 
-
-
-#g-nav.panelactive{
-  position:fixed;
-  z-index: 999;
-top: 0;
-width:100%;
-  height: 100vh;
-}
-
-.circle-bg{
-  position: fixed;
-z-index:3;
-  /*丸の形*/
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: rgb(40, 40, 40);
-transform: scale(0);
-left:-50px;
-  top:-50px;
-  transition: all .6s;
-}
-
-.circle-bg.circleactive{
-transform: scale(50);
-}
-
-/*ナビゲーションの縦スクロール*/
-#g-nav-list{
-  display: none;
-  position: fixed;
-  z-index: 999; 
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-#g-nav.panelactive #g-nav-list{
-  display: block; 
-}
-
-/*ナビゲーション*/
-#g-nav ul {
-  position: absolute;
-  z-index: 999;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-/*背景が出現後にナビゲーションを表示*/
-#g-nav.panelactive ul {
-  opacity:1;
-}
-
-#g-nav.panelactive h1 ul li{
-animation-name:gnaviAnime;
-animation-duration:1s; 
-animation-delay:.2s;
-animation-fill-mode:forwards;
-opacity:0;
-}
-@keyframes gnaviAnime{
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-
-
-/*リストのレイアウト設定*/
-#g-nav li{
-text-align: center; 
-list-style: none;
-}
-
-#g-nav li a{
-color: rgb(255, 255, 255);
-text-decoration: none;
-padding:10px;
-display: block;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: bold;
-}
-
-
-/*= ボタンのためのCSS =*/
-.openbtn1{
-position:fixed;
-top:24px;
-left: 10px;
-z-index: 9999;
-cursor: pointer;
-  width: 50px;
-  height:50px;
-}
-
-.openbtn1 span{
-  display: inline-block;
-  transition: all .4s;
-  position: absolute;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-background-color: rgb(255, 255, 255);
-  width: 45%;
-}
-
-.openbtn1 span:nth-of-type(1) {
-top:15px; 
-}
-
-.openbtn1 span:nth-of-type(2) {
-top:23px;
-}
-
-.openbtn1 span:nth-of-type(3) {
-top:31px;
-}
-
-.openbtn1.active span:nth-of-type(1) {
-  top: 18px;
-  left: 18px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 30%;
-}
-
-.openbtn1.active span:nth-of-type(2) {
-opacity: 0;
-}
-
-.openbtn1.active span:nth-of-type(3){
-  top: 30px;
-  left: 18px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 30%;
-}
-
-/*========= 上部固定させるためのCSS ===============*/
-#header{
-  height: 70px;/*高さ指定*/
-  width:100%;/*横幅指定*/
-}
-/*JSを使いfixedクラスが付与された際の設定*/
-#header.fixed{
-  position: fixed;/*fixedを設定して固定*/
-    z-index: 999;/*最前面へ*/
-    top:0;/*位置指定*/
-    left:0;/*位置指定*/
-}
-
-/*========= top画像 ===============*/
-.top-photo img{
-  max-width: 100%;
-  height: auto;
-}
-
-.img-wrap{
-  position: relative;
-}
-/*========= top画像1アニメーション ===============*/
-.img-wrap1 {
-  overflow: hidden;
-  position: relative;
-  max-height: 450px;
-}
-
-.img-wrap1:before {
-  animation: img-wrap1 1s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: rgb(0, 0, 0);
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-@keyframes img-wrap1 {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-/*========= top画像2アニメーション ===============*/
-.img-wrap2 {
-  overflow: hidden;
-  position: relative;
-  max-height: 450px;
-}
-
-.img-wrap2:before {
-  animation: img-wrap2 1s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: rgb(0, 0, 0);
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-@keyframes img-wrap2 {
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
 /*=========ギャラリーのためのcss=======*/
 
 .photo-wrap{
@@ -675,5 +549,3 @@ hr{
   height:1.5px;
   background:linear-gradient(90deg, rgba(255, 255, 255, 0)0%,rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
 }
-
-
