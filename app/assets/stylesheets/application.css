@@ -15,16 +15,7 @@ p{
 
 /*========= nav ===============*/
 
-.big-bg{
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
 
-#home{
-  background-image: url("IMG_5918 4.JPG");
-  min-height: 100vh;
-}
 
 .page-header{
   display: flex;
@@ -56,7 +47,7 @@ p{
 /*========= top画像 ===============*/
 .top-photo img{
   max-width: 100%;
-  height: auto;
+  height: 450px;
 }
 
 .img-wrap{
@@ -67,6 +58,10 @@ p{
   overflow: hidden;
   position: relative;
   max-height: 450px;
+  padding: 0 8% 0 8%;
+  filter: brightness(200%);
+  filter: opacity(50%);
+  
 }
 
 .img-wrap1:before {
@@ -93,6 +88,9 @@ p{
   overflow: hidden;
   position: relative;
   max-height: 450px;
+  padding:0 8% 0 8%;
+  filter: brightness(200%);
+  filter: opacity(50%);
 }
 
 .img-wrap2:before {
