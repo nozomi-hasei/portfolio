@@ -8,8 +8,8 @@
         <%#メニューバー---------------------------------%>
           <nav>
             <ul class="main-nav">
-              <li><%= link_to 'TOP', contents_path %></li>
-              <li><%= link_to "ABOUT",contents_path, class:"photo-wrap" %></li>
+              <li><%= link_to_unless_current "TOP", root_path %></li>
+              <li><%= link_to "about", "/contents", class: "wrap", id: "ex1"%></li>
               <li><%= link_to "ORIGINAL APP" %></li>
               <li><%= link_to "CONTENT" %></li>
               <li><%= link_to "PHOTO", '#photo' %></li>
@@ -33,7 +33,7 @@
     </div>
 
     <%#ABOUTスタート--------------------------------------%>
-    <div class="wrap" id="about">
+    <div class="wrap" id="ex1">
       <h1>ABOUT</h1>
     </div>
     <div id="luxy">

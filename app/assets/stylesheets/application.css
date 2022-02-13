@@ -34,7 +34,7 @@ p{
 }
 
 .main-nav li{
-  margin:2% 34px;
+  margin:2% 10px 2% 0;
 }
 
 .main-nav a{
@@ -47,10 +47,11 @@ p{
   text-decoration: line-through solid  rgba(112, 179, 128, 0.633);
 }
 
+
 /*========= top画像 ===============*/
 .top-photo img{
   max-width: 100%;
-  height: 350px;
+  height: 450px;
 }
 
 .img-wrap{
@@ -60,10 +61,9 @@ p{
 .img-wrap1 {
   overflow: hidden;
   position: relative;
-  max-height: 350px;
-  padding: 0 8% 0 8%;
-  filter: brightness(50%);
-  filter: opacity(70%);
+  max-height: 450px;
+  padding: 0 4% 0 4%;
+  filter: brightness(90%);
   
 }
 
@@ -90,10 +90,9 @@ p{
 .img-wrap2 {
   overflow: hidden;
   position: relative;
-  max-height: 350px;
-  padding:0 8% 0 8%;
-  filter: brightness(50%);
-  filter: opacity(70%);
+  max-height: 450px;
+  padding:0 4% 0 4%;
+  filter: brightness(90%);
 }
 
 .img-wrap2:before {
@@ -144,6 +143,7 @@ img{
   -o-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
+  filter: brightness(70%);
   transition:0.5s;
   transition:0.5s;
 }
@@ -151,21 +151,22 @@ img{
 .area:hover img{
   transform: scale(1.1);
   transition-duration: 0.7s;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+  -ms-filter: grayscale(70%);
+  filter: grayscale(70%);
+  
 }
 
 .app-box1:hover img{
   transform: scale(1.1);
   transition-duration: 0.7s;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+  -ms-filter: grayscale(70%);
+  filter: grayscale(70%);
 }
 
 
@@ -243,7 +244,7 @@ h4{
 /*=========写真と文章=========*/
 .area{
   position:relative;
-  margin:0 auto 35% auto;
+  margin:0 4% 35% 4%;
   max-width: 100%;
   max-height: 1000PX;
 }
