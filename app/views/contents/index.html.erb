@@ -8,11 +8,11 @@
         <%#メニューバー---------------------------------%>
           <nav>
             <ul class="main-nav">
-              <li><%= link_to_unless_current "TOP", root_path %></li>
-              <li><%= link_to "about", "/contents", class: "wrap", id: "ex1"%></li>
-              <li><%= link_to "ORIGINAL APP" %></li>
-              <li><%= link_to "CONTENT" %></li>
-              <li><%= link_to "PHOTO", '#photo' %></li>
+              <li><%= link_to_unless_current "Top", root_path %></li>
+              <li><<a  data-turbolinks="false" href="#about">About</a></li>
+              <li><%= link_to "Original app" %></li>
+              <li><%= link_to "Job production" %></li>
+              <li><%= link_to "Contact" %></li>
             </ul>
           </nav>
       </header>
@@ -33,8 +33,8 @@
     </div>
 
     <%#ABOUTスタート--------------------------------------%>
-    <div class="wrap" id="ex1">
-      <h1>ABOUT</h1>
+    <div class="wrap">
+      <h1 id="about">ABOUT</h1>
     </div>
     <div id="luxy">
       <section class="area">
