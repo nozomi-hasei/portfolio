@@ -1,10 +1,49 @@
 <body>
   <div id="luxy">
-  
+    <%#--ローディング--%>
+    <div id="splash">
+      <div id="splash_text">
+      </div>
+    </div>
+    <div id="container"></div>
+    <script>
+        // 文字ローディング
+    function BgFadeAnime(){
+      $('.bgLRextendTrigger').each(function(){
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('bgLRextend');
+        }else{
+          $(this).removeClass('bgLRextend');
+        }
+      });
+    
+      $('.bgappearTrigger').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('bgappear');
+        }else{
+          $(this).removeClass('bgappear');
+        }
+      });
+    }
+    
+      $(window).scroll(function (){
+        BgFadeAnime();
+      });
+    
+      $(window).on('load', function(){
+        BgFadeAnime();
+      });
+    </script>
     <%#ヘッダー--------------------------------------%>
     <div id="home" class="big-bg">
       <header class="page-header">
-        <h1>NOZOMI HASEI</h1>
+        <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
         <%#メニューバー---------------------------------%>
           <nav>
             <ul class="main-nav">
@@ -17,7 +56,41 @@
           </nav>
       </header>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
 
+    <script>
+    //ローディング
+      var bar = new ProgressBar.Line(splash_text, {
+        easing: 'easeInOut',
+        duration: 1000,//1000＝1秒
+        strokeWidth: 0.4,
+        color: '#555',
+        trailWidth: 0.2,
+        trailColor: '#bbb',
+        text: {
+          style: {
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            padding: '0',
+            margin: '-30px 0 0 0',
+            transform:'translate(-50%,-50%)',
+            'font-size':'1rem',
+            color: '#fff',
+          },
+          autoStyleContainer: false 
+        },
+        step: function(state, bar) {
+      		bar.setText(Math.round(bar.value() * 100) + ' %');
+        }
+      });
+
+        //アニメーションスタート
+        bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+          $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
+        });  
+    </script>
     <%#topスタート----------------------------------------%>
     <div class="img-wrap">
       <div class="img-wrap1">
@@ -34,13 +107,13 @@
 
     <%#ABOUTスタート--------------------------------------%>
     <div class="wrap">
-      <h1 id="about">ABOUT</h1>
+      <h1 id="about"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">ABOUT</span></span></h1>
     </div>
     <div id="luxy">
       <section class="area">
         <div class="luxy-el" data-speed-x="5" ><img src="/assets/IMG_5920.JPG" alt="">
           <div class="box luxy-el" data-speed-y="-5" data-offset="380">
-            <h2>長谷井　望</h2>
+            <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">長谷井　望</span></span></h2>
             <hr>
               <p>1999年9月2日生まれ、岡山県出身</p>
               <p>父親の仕事の関係で、学生時代は転勤が多く日本の様々な場所で生活をしてきました。（岡山県、広島県、京都府、千葉県、東京都）</p>
@@ -112,7 +185,7 @@
       </section>
 
     <%#ORIGINAL APPスタート--------------------------------------%>
-      <h1>ORIGINAL APP</h1>
+      <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">ORIGINAL APP</span></span></h1>
         <div class="app-box1">
           <div class="app-box2">
             <a href="https://ringjacket.herokuapp.com/"><img src="/assets/RINGJACKET.jpg" alt=""></a>
@@ -232,14 +305,14 @@
       </ul>
     </div>
     <script>
-    //lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
+    
     
     lightbox.option({
       'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
       'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
     })
     
-    //ふわっと見せるためのJS。3-5-3 ページが読み込まれたらすぐに動かしたい&画面をスクロールをしたら動かしたい場合内のソースコード使用
+    
     
     function fadeAnime(){
     // flipLeft
@@ -263,8 +336,6 @@
         fadeAnime();/
       });
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     
     <%#CONTACTスタート--------------------------------------%>
