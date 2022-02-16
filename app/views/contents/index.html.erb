@@ -40,6 +40,29 @@
         BgFadeAnime();
       });
     </script>
+    <script>
+    function fadeAnime(){
+      $('.fadeUpTrigger').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('fadeUp');
+        }else{
+        $(this).removeClass('fadeUp');
+        }
+        });
+    }
+
+      $(window).scroll(function (){
+        fadeAnime();
+      });
+
+      $(window).on('load', function(){
+        fadeAnime();
+      });
+    </script>
+
     <%#ヘッダー--------------------------------------%>
     <div id="home" class="big-bg">
       <header class="page-header">
@@ -111,7 +134,7 @@
     </div>
     <div id="luxy">
       <section class="area">
-        <div class="luxy-el" data-speed-x="5" ><img src="/assets/IMG_5920.JPG" alt="">
+        <div class="luxy-el fadeUpTrigger" data-speed-x="5" ><img src="/assets/IMG_5920.JPG" alt="">
           <div class="box luxy-el" data-speed-y="-5" data-offset="380">
             <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">長谷井　望</span></span></h2>
             <hr>
@@ -139,8 +162,8 @@
       </section>
 
       <section class="area">
-        <div class="luxy-el"  data-speed-x="5" ><img src="/assets/Workplace-with-laptop-994210.jpg" alt="">
-          <div class="box luxy-el" data-speed-y="-5" data-offset="370">
+        <div class="luxy-el fadeUpTrigger"  data-speed-x="5" ><img src="/assets/Workplace-with-laptop-994210.jpg" alt="">
+          <div class="box luxy-el " data-speed-y="-5" data-offset="370">
             <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">プログラミング</span></span></h2>
             <hr>
               <b><p><span class="line">プログラミングに興味を持ったキッカケ</span></p></b>
@@ -156,8 +179,8 @@
       </section>
 
       <section class="area">
-        <div class="luxy-el" data-speed-x="5" >><img src="/assets/nozomi.png" alt="">
-          <div class="box luxy-el" data-speed-y="-5" data-offset="500">
+        <div class="luxy-el fadeUpTrigger" data-speed-x="5" >><img src="/assets/nozomi.png" alt="">
+          <div class="box luxy-el " data-speed-y="-5" data-offset="500">
             <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">セールスパーソン</span></span></h2>
             <hr>
               <p>株式会社 リングヂャケット （2016年〜）</p>
@@ -172,7 +195,7 @@
       </section>
         
       <section class="area">
-        <div class="luxy-el" data-speed-x="5" ><img src="/assets/IMG_0549.JPG" alt="">
+        <div class="luxy-el fadeUpTrigger" data-speed-x="5" ><img src="/assets/IMG_0549.JPG" alt="">
           <div class="box luxy-el" data-speed-y="-4" data-offset="550">
             <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">フォトグラファー & 動画クリエイター</span></span></h2>
             <hr>
@@ -187,10 +210,10 @@
     <%#ORIGINAL APPスタート--------------------------------------%>
       <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">ORIGINAL APP</span></span></h1>
         <div class="app-box1">
-          <div class="app-box2">
+          <div class="app-box2 fadeUpTrigger">
             <a href="https://ringjacket.herokuapp.com/"><img src="/assets/RINGJACKET.jpg" alt=""></a>
           </div>
-          <div class="app-word">
+          <div class="app-word fadeUpTrigger">
             <div class="app-word1">
               <h3>アプリ概要</h3>
               <p>アプリ名：RING JACKET お客様ご紹介アプリ</p>
@@ -202,7 +225,7 @@
               <p>SNSやメッセージアプリなどで手
             </div>
           </div>
-          <div class="app-word">
+          <div class="app-word fadeUpTrigger">
             <div class="app-word1">
               <h3>こだわりの機能</h3>
               <p>ユーザー登録機能にて、会員登録からログインを行わないとアプリを使用できない</p>
@@ -215,10 +238,10 @@
           </div>
         </div>
         <div class="app-box1">
-          <div class="app-box2">
+          <div class="app-box2 fadeUpTrigger">
             <a href="https://nozomi-hasei.herokuapp.com/"><img src="/assets/RpmUtKKQOle0vL41642946138_1642946152.jpg" alt=""></a>
           </div>
-          <div class="app-word">
+          <div class="app-word fadeUpTrigger">
             <div class="app-word1">
               <h3>アプリ概要</h3>
               <p>アプリ名：ポートフォリオ</p>
@@ -230,7 +253,7 @@
               <p></p>
             </div>
           </div>
-          <div class="app-word">
+          <div class="app-word fadeUpTrigger">
             <div class="app-word1">
               <h3>こだわりの機能</h3>
               <p>写真家のヨシダナギさんのHPを参考にさせていただき、ブラックを基調としたシックでカッコいい質感にしています。</p>
@@ -248,9 +271,9 @@
 
     <%#contentスタート--------------------------------------%>
     <div class="skill-wrap">
-      <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Job production</span></span></h1>
+      <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">JOB PRODUCTION</span></span></h1>
     </div>
-        <div class="container">
+        <div class="container fadeUpTrigger">
             <div class="item"><video src="/videos/名称未設定.mp4" controls></video></div>
             <div class="item" id="skill-word">
               <h2>Youtube1</h2>
@@ -339,7 +362,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     
     <%#CONTACTスタート--------------------------------------%>
-    <div class="contact-wrap" id="contact">
+    <div class="contact-wrap fadeUpTrigger" id="contact">
       <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">CONTACT FORM</span></span></h1>
     </div>
     <%= form_with model: @content, url: contents_path,local: true, method: :post do |form| %>
