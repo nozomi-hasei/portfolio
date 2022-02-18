@@ -51,7 +51,7 @@ p{
 /*========= top画像 ===============*/
 .top-photo img{
   max-width: 100%;
-  height: 450px;
+  max-height: 100%;
 }
 
 .img-wrap{
@@ -61,7 +61,7 @@ p{
 .img-wrap1 {
   overflow: hidden;
   position: relative;
-  max-height: 450px;
+  max-height: 100%;
   padding: 0 4% 0 4%;
   filter: brightness(90%);
   
@@ -90,7 +90,7 @@ p{
 .img-wrap2 {
   overflow: hidden;
   position: relative;
-  max-height: 450px;
+  max-height: 100%;
   padding:0 4% 0 4%;
   filter: brightness(90%);
 }
@@ -232,8 +232,6 @@ h4{
   max-height: 200px;
   margin-top: 5%;
   margin-bottom: 5%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 
@@ -262,7 +260,8 @@ h4{
   top:30%;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  width: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 7px 7px 0px 0 #00000033;
 }
