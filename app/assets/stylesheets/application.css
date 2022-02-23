@@ -203,7 +203,7 @@ h3{
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: 1;
-  font-size: 1.5rem;
+  font-size: 3vh;
 }
 
 h3:before, h3:after {
@@ -212,7 +212,7 @@ h3:before, h3:after {
   top: 50%;
   display: inline-block;
   width: 45px;
-  height: 4px;
+  height: 8px;
   border-top: solid 1px rgb(255, 255, 255);
   border-bottom: solid 1px rgb(255, 255, 255);
 }
@@ -322,11 +322,6 @@ h4{
 .app-word1 p{
   color: #ffffff;
 }
-
-.app-word1 h3{
-  font-size: 25px;
-}
-
 /*=========SKILL CSS=========*/
 .container{ 
   display: grid;
