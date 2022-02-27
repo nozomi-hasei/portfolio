@@ -238,9 +238,18 @@ h4{
   margin:0 4% 70% 4%;
   max-width: 100%;
   max-height: 1500px;
+  
 }
 
+#luxy{
+  height: 1500px;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+}
 
+#luxy section{
+  scroll-snap-align: start;
+}
 
 /*1,3目写真*/
 .area img{
