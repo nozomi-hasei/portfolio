@@ -241,15 +241,6 @@ h4{
   
 }
 
-#luxy{
-  height: 1500px;
-  overflow-y: scroll;
-  scroll-snap-type: mandatory;
-}
-
-#luxy section{
-  scroll-snap-align: start;
-}
 
 /*1,3目写真*/
 .area img{

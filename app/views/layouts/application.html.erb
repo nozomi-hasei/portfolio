@@ -10,6 +10,135 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
   </head>
   <body>
+  <div id="luxy">
+    <%#--ローディング--%>
+    <div id="splash">
+      <div id="splash_text">
+      </div>
+    </div>
+    <div id="container"></div>
+    <script>
+        // 文字ローディング
+    function BgFadeAnime(){
+      $('.bgLRextendTrigger').each(function(){
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('bgLRextend');
+        }else{
+          $(this).removeClass('bgLRextend');
+        }
+      });
+    
+      $('.bgappearTrigger').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('bgappear');
+        }else{
+          $(this).removeClass('bgappear');
+        }
+      });
+    }
+    
+      $(window).scroll(function (){
+        BgFadeAnime();
+      });
+    
+      $(window).on('load', function(){
+        BgFadeAnime();
+      });
+    </script>
+    <script>
+    function fadeAnime(){
+      $('.fadeUpTrigger').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('fadeUp');
+        }else{
+        $(this).removeClass('fadeUp');
+        }
+        });
+    }
+
+      $(window).scroll(function (){
+        fadeAnime();
+      });
+
+      $(window).on('load', function(){
+        fadeAnime();
+      });
+    </script>
+
+    <%#ヘッダー--------------------------------------%>
+    <div id="home" class="big-bg">
+      <header class="page-header">
+        <h1 id="hpname"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
+        <%#メニューバー---------------------------------%>
+          <nav>
+            <ul class="main-nav">
+              <li><%= link_to "Top", root_path %></li>
+              <li><%= link_to "About"%></li>
+              <li><%= link_to "Original app",  contents_index_path %></li>
+              <li><%= link_to "WORK" %></li>
+              <li><%= link_to "Contact" %></li>
+            </ul>
+          </nav>
+      </header>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+
+    <script>
+    //ローディング
+      var bar = new ProgressBar.Line(splash_text, {
+        easing: 'easeInOut',
+        duration: 1000,//1000＝1秒
+        strokeWidth: 0.4,
+        color: '#555',
+        trailWidth: 0.2,
+        trailColor: '#bbb',
+        text: {
+          style: {
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            padding: '0',
+            margin: '-30px 0 0 0',
+            transform:'translate(-50%,-50%)',
+            'font-size':'1rem',
+            color: '#fff',
+          },
+          autoStyleContainer: false 
+        },
+        step: function(state, bar) {
+      		bar.setText(Math.round(bar.value() * 100) + ' %');
+        }
+      });
+
+        //アニメーションスタート
+        bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+          $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
+        });  
+    </script>
+    <%#topスタート----------------------------------------%>
+    <div class="img-wrap">
+      <div class="img-wrap1">
+        <div class="top-photo"><img src="/assets/IMG_5918 4.JPG" alt=""></div>
+      </div>
+      <%#<div class="top-photo-font"><p>nozomi hasei</p></div>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Meow+Script&display=swap');
+      </style>%>
+      <div class="img-wrap2">
+        <div class="top-photo"><img src="/assets/IMG_5918 3.jpg" alt=""></div>
+      </div>
+    </div>
+
   <%= yield %>
   </body>
 </html>
