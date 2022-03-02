@@ -180,10 +180,6 @@ h1{
 }
 
 
-body h1{
-  text-decoration: none;
-}
-
 body h1:hover{
   color: gray;
   text-decoration: line-through solid  rgba(112, 179, 128, 0.619);
