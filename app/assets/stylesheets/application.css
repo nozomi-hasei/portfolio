@@ -610,7 +610,7 @@ hr{
     position: absolute;
     width: 100%;
     height: 5%;
-    margin-top: 50px;
+    margin-top: 8%;
     background-color: rgba(112, 179, 128, 0.619);/*伸びる背景色の設定*/
 }
 @keyframes bgLRextendAnime{

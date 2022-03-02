@@ -77,10 +77,10 @@
 <%#ヘッダー--------------------------------------%>
     <div id="home" class="big-bg">
       <header class="page-header">
-        <h1 id="hpname"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
+        <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
         <%#メニューバー---------------------------------%>
           <nav>
-            <ul class="main-nav">
+            <ul class="main-nav fadeUpTrigger">
               <li><%= link_to "About", abouts_path %></li>
               <li><%= link_to "Original app", apps_path %></li>
               <li><%= link_to "WORK", works_path %></li>
@@ -141,15 +141,14 @@
   <%= yield %>
 
 <%#フッター---------------------------------------------%>
-    <footer>
-      <div class="footer-area">
-        Copyright Portfolio by nozomi hasei (2022)
-      </div>
-    </footer>
-  </div>
+  <footer>
+    <div class="footer-area">
+      Copyright Portfolio by nozomi hasei (2022)
+    </div>
+  </footer>
 
   <script>
-(function(root, factory) {
+  (function(root, factory) {
 	'use strict';
 
 	if (typeof define === 'function' && define.amd) {
@@ -161,10 +160,10 @@
 		module.exports = factory();
 	}
 	else {
-		// BROWSER
-		root.luxy = factory();
-	}
-}(this, function() {
+		  // BROWSER
+		  root.luxy = factory();
+	   }
+  }(this, function() {
 
 	'use strict';
 	
