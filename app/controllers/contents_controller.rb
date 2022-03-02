@@ -16,15 +16,6 @@ class ContentsController < ApplicationController
     end
   end
 
-  def originalapp
-  end
-
-  def work
-  end
-
-  def contact
-  end
-  
   private
   def content_params
     params.permit(:company, :name, :e_mail, :message)

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>nozomi-hasei</title>
-    <%= csrf_meta_tags %>
+    <title>NOZOMI HASEI'S PORTFOLIO </title>
+    <%= csrf_meta_tags %> 
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'reset', media: 'all' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -77,10 +77,11 @@
 <%#ヘッダー--------------------------------------%>
     <div id="home" class="big-bg">
       <header class="page-header">
-        <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
+        <h1 href="/"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">NOZOMI HASEI</span></span></h1>
         <%#メニューバー---------------------------------%>
           <nav>
             <ul class="main-nav fadeUpTrigger">
+              <li><%= link_to "top", root_path %></li>
               <li><%= link_to "About", abouts_path %></li>
               <li><%= link_to "Original app", apps_path %></li>
               <li><%= link_to "WORK", works_path %></li>
@@ -124,20 +125,6 @@
           $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
         });  
     </script>
-    <%#topスタート----------------------------------------%>
-    <div class="img-wrap">
-      <div class="img-wrap1">
-        <div class="top-photo"><img src="/assets/IMG_5918 4.JPG" alt=""></div>
-      </div>
-      <%#<div class="top-photo-font"><p>nozomi hasei</p></div>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Meow+Script&display=swap');
-      </style>%>
-      <div class="img-wrap2">
-        <div class="top-photo"><img src="/assets/IMG_5918 3.jpg" alt=""></div>
-      </div>
-    </div>
-
   <%= yield %>
 
 <%#フッター---------------------------------------------%>
