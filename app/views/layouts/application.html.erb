@@ -75,23 +75,38 @@
     </script>
 
 <%#ヘッダー--------------------------------------%>
-    <div id="home" class="big-bg">
       <header class="page-header">
         <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
-        <%#メニューバー---------------------------------%>
-          <nav>
-            <ul class="main-nav fadeUpTrigger">
-              <li><%= link_to "top", root_path %></li>
-              <li><%= link_to "About", abouts_path %></li>
-              <li><%= link_to "Original app", apps_path %></li>
-              <li><%= link_to "WORK", works_path %></li>
-              <li><%= link_to "Contact", contents_path %></li>
-            </ul>
-          </nav>
       </header>
-    </div>
+				<%#メニューバー---------------------------------%>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+          <nav id="g-nav">
+            <div id="g-nav-list">
+              <ul>
+                <li><%= link_to "top", root_path %></li>
+                <li><%= link_to "About", abouts_path %></li>
+                <li><%= link_to "Original app", apps_path %></li>
+                <li><%= link_to "WORK", works_path %></li>
+                <li><%= link_to "Contact", contents_path %></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script>
+      $(".openbtn").click(function () {//ボタンがクリックされたら
+      $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+        $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+        $("#container").toggleClass('mainblur');//ぼかしたいエリアにmainblurクラスを付与
+      });
+
+      $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+          $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+          $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+          $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+      });
+    </script>
 
     <script>
     //ローディング
@@ -125,8 +140,9 @@
           $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
         });  
     </script>
-  <%= yield %>
-
+    <div id="container">
+    <%= yield %>
+    <!--/container--></div>
 <%#フッター---------------------------------------------%>
   <footer>
     <div class="footer-area">
@@ -245,7 +261,6 @@
 			},
 			wrapperInit: function(){
 				this.wrapper.style.width = '100%';
-				this.wrapper.style.position = 'fixed';
 			},
 			targetsInit: function(elm,attr){
 				
