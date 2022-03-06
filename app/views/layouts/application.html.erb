@@ -78,6 +78,7 @@
       <header class="page-header">
         <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
       </header>
+			<div id="container">
 				<%#メニューバー---------------------------------%>
         <div class="openbtn"><span></span><span></span><span></span></div>
           <nav id="g-nav">
@@ -140,7 +141,6 @@
           $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
         });  
     </script>
-    <div id="container">
     <%= yield %>
     <!--/container--></div>
 <%#フッター---------------------------------------------%>
