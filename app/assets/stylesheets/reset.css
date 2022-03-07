@@ -8,6 +8,8 @@ p {
   font-size: inherit;
   line-height: inherit;
   font-weight: lighter;
+  margin: 0;
+  padding: 0;
 }
 
 

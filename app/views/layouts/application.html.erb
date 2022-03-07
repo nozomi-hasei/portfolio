@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NOZOMI HASEI'S PORTFOLIO </title>
+    <title>NOZOMI HASEI'S PORTFOLIO - 長谷井望のポートフォリオ</title>
     <%= csrf_meta_tags %> 
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'reset', media: 'all' %>
@@ -75,24 +75,24 @@
     </script>
 
 <%#ヘッダー--------------------------------------%>
+    <div id="container">
       <header class="page-header">
         <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
       </header>
-			<div id="container">
-				<%#メニューバー---------------------------------%>
-        <div class="openbtn"><span></span><span></span><span></span></div>
-          <nav id="g-nav">
-            <div id="g-nav-list">
-              <ul>
-                <li><%= link_to "top", root_path %></li>
-                <li><%= link_to "About", abouts_path %></li>
-                <li><%= link_to "Original app", apps_path %></li>
-                <li><%= link_to "WORK", works_path %></li>
-                <li><%= link_to "Contact", contents_path %></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+<%#メニューバー---------------------------------%>
+      <div class="openbtn"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+          <div id="g-nav-list">
+            <ul>
+              <li><%= link_to "top", root_path %></li>
+              <li><%= link_to "About", abouts_path %></li>
+              <li><%= link_to "Original app", apps_path %></li>
+              <li><%= link_to "WORK", works_path %></li>
+              <li><%= link_to "Contact", contents_path %></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script>
@@ -141,14 +141,15 @@
           $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
         });  
     </script>
-    <%= yield %>
-    <!--/container--></div>
+      <%= yield %>
+
 <%#フッター---------------------------------------------%>
-  <footer>
-    <div class="footer-area">
-      Copyright Portfolio by nozomi hasei (2022)
-    </div>
-  </footer>
+      <footer>
+        <div class="footer-area">
+          Copyright Portfolio by nozomi hasei (2022)
+        </div>
+      </footer>
+    <!--/container--></div>
 
   <script>
   (function(root, factory) {
