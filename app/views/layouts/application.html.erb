@@ -12,10 +12,10 @@
   <body>
   <div id="luxy">
   <%#--ローディング--%>
-    <div id="splash">
+    <%#<div id="splash">
       <div id="splash_text">
       </div>
-    </div>
+    </div>%>
     <div id="container"></div>
     <script>
         // 文字ローディング
@@ -75,11 +75,11 @@
     </script>
 
 <%#ヘッダー--------------------------------------%>
+    <div id="container">
       <header class="page-header">
         <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
 <%#メニューバー---------------------------------%>
-    <div id="container">
-        <div class="openbtn"><span></span><span></span><span></span></div>
+        <div class="openbtn fadeUpTrigger"><span></span><span></span><span></span></div>
           <nav id="g-nav">
             <div id="g-nav-list">
               <ul>
@@ -146,7 +146,7 @@
 
 <%#フッター---------------------------------------------%>
       <footer>
-        <div class="footer-area">
+        <div class="footer-area fadeUpTrigger">
           <p>©️ 2022 NOZOMI HASEI</P>
         </div>
       </footer>

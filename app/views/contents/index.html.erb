@@ -1,25 +1,26 @@
 
 <%#CONTACTスタート--------------------------------------%>
-<div class="contact-wrap fadeUpTrigger" id="contact">
+
+<div class="wrap fadeUpTrigger" id="contact">
   <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">CONTACT FORM</span></span></h1>
 </div>
 <%= form_with model: @content, url: contents_path,local: true, method: :post do |form| %>
-  <div class="contact">
+  <div class="contact fadeUpTrigger">
     <%= form.text_field :company, placeholder: "COMPANY", class:'form-company' %>
   </div>
-  <div class="contact">
+  <div class="contact fadeUpTrigger">
     <%= form.text_field :name, placeholder: "NAME", class:'form-name' %>
   </div>
-  <div class="contact">
+  <div class="contact fadeUpTrigger">
     <%= form.text_field :e_mail, placeholder: "E-MAIL", class:'form-e-mail' %>
   </div>
-  <div class="contact">
+  <div class="contact fadeUpTrigger">
     <%= form.text_area :message, placeholder: "MESSAGE", class:'form-message' %>
   </div>
-  <div class="contact" id="contact-ward">
+  <div class="contact fadeUpTrigger" id="contact-ward">
     <p>*お返事させていただくまでに、お時間を要する場合がございます。</p>
   </div>
-  <div class="contact" id="button">
+  <div class="contact fadeUpTrigger" id="button">
     <%= form.submit "SEND", class: 'form-submit'  %>
   </div>
 <% end %>
