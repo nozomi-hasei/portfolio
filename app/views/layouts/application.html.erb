@@ -97,16 +97,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script>
-      $(".openbtn").click(function () {//ボタンがクリックされたら
-      $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-        $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-        $("#container").toggleClass('mainblur');//ぼかしたいエリアにmainblurクラスを付与
+      $(".openbtn").click(function () {
+      $(this).toggleClass('active');
+        $("#g-nav").toggleClass('panelactive');
+        $("#container").toggleClass('mainblur');
       });
 
-      $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-          $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
-          $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
-          $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+      $("#g-nav a").click(function () {
+          $(".openbtn").removeClass('active');
+          $("#g-nav").removeClass('panelactive');
+          $("#container").removeClass('mainblur');
       });
     </script>
 
