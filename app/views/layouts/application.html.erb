@@ -75,10 +75,10 @@
     </script>
 
 <%#ヘッダー--------------------------------------%>
-    <div id="container">
       <header class="page-header">
         <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
 <%#メニューバー---------------------------------%>
+    <div id="container">
         <div class="openbtn"><span></span><span></span><span></span></div>
           <nav id="g-nav">
             <div id="g-nav-list">
@@ -110,7 +110,7 @@
       });
     </script>
 
-    <script>
+    <%#<script>
     //ローディング
       var bar = new ProgressBar.Line(splash_text, {
         easing: 'easeInOut',
@@ -141,7 +141,7 @@
         bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
           $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
         });  
-    </script>
+    </script>%>
       <%= yield %>
 
 <%#フッター---------------------------------------------%>
