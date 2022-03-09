@@ -805,3 +805,49 @@ hr{
     width: 30%;
 }
 
+/*==============タブ================*/
+
+
+
+/*tabの形状*/
+.tab{
+	display: flex;
+	flex-wrap: wrap;
+  list-style: none;
+}
+.tab li a{
+	display: block;
+	background:#ddd;
+	margin:0 2px;
+	padding:10px 20px;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+	background:#fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.tab-area {
+	display: none;/*はじめは非表示*/
+	opacity: 0;/*透過0*/
+	background: rgb(0, 0, 0);
+	padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.tab-area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
