@@ -168,6 +168,10 @@ body h1:hover{
   text-decoration: line-through solid  rgba(112, 179, 128, 0.619);
 }
 
+.tab-area h1:hover{
+  color: gray;
+  text-decoration: line-through solid  rgba(166, 112, 179, 0.52);
+}
 
 h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -215,10 +219,14 @@ h4{
   max-height: 200px;
   padding: 1% 0 1% 0;
   margin: 1% 1% 3% 1%;
-  border-top: double 10px rgba(112, 179, 128, 0.485);
+  border-top: double 10px rgba(112, 179, 173, 0.485);
   border-bottom: double 10px rgba(112, 179, 128, 0.485);
 }
 
+.tab-area .wrap {
+  border-top: double 10px rgba(179, 112, 143, 0.485);
+  border-bottom: double 10px rgba(149, 112, 179, 0.485);
+}
 
 /*=========写真と文章=========*/
 .area{
@@ -817,19 +825,18 @@ hr{
 }
 .tab li a{
 	display: block;
-	background:#ddd;
+	background:rgb(0, 0, 0);
 	margin:0 2px;
 	padding:10px 20px;
 }
 /*liにactiveクラスがついた時の形状*/
-.tab li.active a{
+.tab .active a{
 	background:#fff;
 }
 
 
 /*エリアの表示非表示と形状*/
 .tab-area {
-	display: none;/*はじめは非表示*/
 	opacity: 0;/*透過0*/
 	background: rgb(0, 0, 0);
 	padding:50px 20px;

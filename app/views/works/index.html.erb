@@ -3,26 +3,7 @@
     <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">WORK</span></span></h1>
   </div>
   <div class="container-work">
-      <div class="item fadeUpTrigger"><video src="/videos/名称未設定.mp4" controls autoplay muted>></video></div>
-      <div class="item fadeUpTrigger" id="skill-word">
-        <h2>RINGJACKET Napoli fair</h2>
-        <p>期間限定のフェア告知動画を制作</p>
-        <p>フェアDM（手紙）にQRコードを貼り付け活用</p>
 
-      </div>
-      <div class="item fadeUpTrigger" id="skill-word">
-        <h2>RINGJACKET Napoli intoroduction</h2>
-        <p>2022春夏シーズンで新宿店スタッフが欲しい商品をご紹介</p>
-        <p>弊社YouTubeアカウント、新宿店インスタグラムで公開</p>
-      </div>
-      <div class="item fadeUpTrigger"><video src="/videos/シーケンス 01_1-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
-      <div class="item fadeUpTrigger"><video src="/videos/21FW Order Fair-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
-      <div class="item fadeUpTrigger" id="skill-word">
-        <h2>RINGJACKET order fair</h2>
-        <p>半期に一度開催するオーダーフェアのご紹介</p>
-        <p>弊社のオーダーシステム、オーダーフェア内容を網羅<p>
-        <p>弊社YouTubeアカウント、新宿店インスタグラムで公開</p>
-      </div>
       <div class="item fadeUpTrigger" id="skill-word">
         <h2>TRENZA PREMIUM</h2>
         <p>子供用の紳士服ブランドの宣伝写真の撮影</p>
@@ -41,95 +22,76 @@
       <div class="item fadeUpTrigger"><a href="https://www.instagram.com/ringjacket_shinjuku/"><img src="/assets/bea21c12b7d4b7f46ebb5cb27397ad3a.png" alt=""></a></div>
   </div>
 
-<%#PHOTOスタート--------------------------------------%>
-  <div class="photo-wrap", id="photo">
-    <h1>PHOTO</h1>
-  </div>
-  <div class="wrapper fadeUpTrigger">
-    <ul class="gallery">
-      <li><a href="/assets/IMG_5887.JPG" data-lightbox="gallery1" data-title="山村テラス  (長野県南佐久郡佐久穂町)"><img src="assets/IMG_5887.JPG" alt=""></a></li>
-      <li><a href="/assets/IMG_6480.JPG" data-lightbox="gallery1" data-title="グランドハイアット東京  （六本木）"><img src="/assets/IMG_6480.JPG" alt=""></a></li>
-      <li><a href="/assets/BF6A8BFF-0A0E-48EF-A59D-2340336D03FE 2.JPG" data-lightbox="gallery1" data-title="JAZZ BAR 'MADURO'  (六本木)"><img src="/assets/BF6A8BFF-0A0E-48EF-A59D-2340336D03FE 2.JPG" alt=""></a></li>
-      <li><a href="/assets/IMG_5298.JPG" data-lightbox="gallery1" data-title="絵画  (渋谷)"><img src="/assets/IMG_5298.JPG" alt=""></a></li>
-      <li><a href="/assets/IMG_5709.JPG" data-lightbox="gallery1" data-title="RING JACKET 'SUIT STYLE'  (新宿)"><img src="/assets/IMG_5709.JPG" alt=""></a></li>
-      <li><a href="/assets/8EF8AAF0-2E28-4AAD-BA8A-44C183885289.JPG" data-lightbox="gallery1" data-title="Friend snap  (丸の内)"><img src="/assets/8EF8AAF0-2E28-4AAD-BA8A-44C183885289.JPG" alt=""></a></li>
-      <li><a href="/assets/24A41748-69B1-487C-9AA6-EFB337AA9C16.JPG" data-lightbox="gallery1" data-title="Fantastic snow scene  (江戸川区)"><img src="/assets/24A41748-69B1-487C-9AA6-EFB337AA9C16.JPG" alt=""></a></li>
-      <li><a href="/assets/8C11AA29-E579-4D7B-B866-B7C80E852F46.JPG" data-lightbox="gallery1" data-title="Friend snap  (三軒茶屋)"><img src="/assets/8C11AA29-E579-4D7B-B866-B7C80E852F46.JPG" alt=""></a></li>
-      <li><a href="/assets/IMG_5214.JPG" data-lightbox="gallery1" data-title="富士サファリパーク  (静岡県)"><img src="/assets//IMG_5214.JPG" alt=""></a></li>
-      <li><a href="/assets/IMG_6456 2.jpg" data-lightbox="gallery1" data-title="Champagne  (自宅)"><img src="/assets/IMG_6456 2.jpg" alt=""></a></li>
-      <li><a href="/assets/IMG_6501.jpg" data-lightbox="gallery1" data-title="Another Energy Exhibition (Mori Arts Center)"><img src="/assets/IMG_6501.jpg" alt=""></a></li>
-      <li><a href="/assets/IMG_3566.jpg" data-lightbox="gallery1" data-title="東京駅(丸の内)"><img src="/assets/IMG_3566.jpg" alt=""></a></li>
-    </ul>
-  </div>
 
-    <script>
-    lightbox.option({
-      'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
-      'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
-    })
-    function fadeAnime(){
-    // flipLeft
-    $('.gallery li').each(function(){ 
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight){
-            $(this).addClass('flipLeft');
-        }else{
-            $(this).removeClass('flipLeft');
-        }
-    });
-    }
-  
-      $(window).scroll(function (){
-        fadeAnime();/
-      });
-  
-      $(window).on('load', function(){
-        fadeAnime();/
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-    
 
 
     <div class="wrapper">
-      <ul class="tab">
-        <li><a href="#YouTube">YouTube</a></li>
-        <li><a href="#drink">ドリンク</a></li>
-        <li><a href="#dinner">ディナー</a></li>
+      <ul class="tab fadeUpTrigge">
+        <li><a href="#YouTube">YOUTUBE</a></li>
+        <li><a href="#INSTAGRAM">INSTAGRAM</a></li>
+        <li><a href="#PHOTO">PHOTO</a></li>
+        <li><a href="#PERSONAL JOB">PERSONAL JOB</a></li>
       </ul>
     
     <div id="YouTube" class="tab-area">
-      <h2>YouTube</h2>
+      <div class="wrap" id="tab">
+        <h1>YouTube</h1>
+      </div>
         <div class="container-work">
-          <div class="item fadeUpTrigger"><video src="/videos/名称未設定.mp4" controls autoplay muted>></video></div>
-          <div class="item fadeUpTrigger" id="skill-word">
+          <div class="item fadeUpTrigge"><video src="/videos/名称未設定.mp4" controls autoplay muted>></video></div>
+          <div class="item fadeUpTrigge" id="skill-word">
             <h2>RINGJACKET Napoli fair</h2>
             <p>期間限定のフェア告知動画を制作</p>
             <p>フェアDM（手紙）にQRコードを貼り付け活用</p>
           </div>
-          <div class="item fadeUpTrigger" id="skill-word">
+          <div class="item fadeUpTrigge" id="skill-word">
             <h2>RINGJACKET Napoli intoroduction</h2>
             <p>2022春夏シーズンで新宿店スタッフが欲しい商品をご紹介</p>
             <p>弊社YouTubeアカウント、新宿店インスタグラムで公開</p>
           </div>
-          <div class="item fadeUpTrigger"><video src="/videos/シーケンス 01_1-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
-          <div class="item fadeUpTrigger"><video src="/videos/21FW Order Fair-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
-          <div class="item fadeUpTrigger" id="skill-word">
+          <div class="item fadeUpTrigge"><video src="/videos/シーケンス 01_1-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
+          <div class="item fadeUpTrigge"><video src="/videos/21FW Order Fair-[onlinevideoconverter.com].mp4" controls autoplay muted>></video></div>
+          <div class="item fadeUpTrigge" id="skill-word">
             <h2>RINGJACKET order fair</h2>
             <p>半期に一度開催するオーダーフェアのご紹介</p>
             <p>弊社のオーダーシステム、オーダーフェア内容を網羅<p>
             <p>弊社YouTubeアカウント、新宿店インスタグラムで公開</p>
           </div>
     <!--/area--></div>
-    <div id="drink" class="tab-area">
-      <h2>ドリンク</h2>
-        <ul>
-          <li>ウーロン茶</li>
-          <li>オレンジジュース</li>
-          <li>ジンジャーエール</li>
+
+    <div id="INSTAGRAM" class="tab-area">
+      <div class="wrap" id="tab">
+        <h1>INSTAGRAM</h1> 
+      </div>
+        <div class="container-work">
+          <div class="item fadeUpTrigger" id="skill-word">
+            <h2><a href="https://www.instagram.com/ringjacket_shinjuku/"><img id="logo" src="/assets/3225191_app_instagram_logo_media_popular_icon.png" ></a>RING JACKET SHINJUKU Instagram</h2>
+            <p>新宿店の公式アカウント開設、コンテンツ制作、運営を経験</p>
+          </div>
+          <div class="item fadeUpTrigger"><a href="https://www.instagram.com/ringjacket_shinjuku/"><img src="/assets/bea21c12b7d4b7f46ebb5cb27397ad3a.png" alt=""></a></div>
+        </div>
+    <!--/area--></div>
+
+
+
+    <div id="PHOTO" class="tab-area">
+      <h1>PHOTO</h1>
+      <div class="wrapper fadeUpTrigger">
+        <ul class="gallery">
+          <li><a href="/assets/IMG_5887.JPG" data-lightbox="gallery1" data-title="山村テラス  (長野県南佐久郡佐久穂町)"><img src="assets/IMG_5887.JPG" alt=""></a></li>
+          <li><a href="/assets/IMG_6480.JPG" data-lightbox="gallery1" data-title="グランドハイアット東京  （六本木）"><img src="/assets/IMG_6480.JPG" alt=""></a></li>
+          <li><a href="/assets/BF6A8BFF-0A0E-48EF-A59D-2340336D03FE 2.JPG" data-lightbox="gallery1" data-title="JAZZ BAR 'MADURO'  (六本木)"><img src="/assets/BF6A8BFF-0A0E-48EF-A59D-2340336D03FE 2.JPG" alt=""></a></li>
+          <li><a href="/assets/IMG_5298.JPG" data-lightbox="gallery1" data-title="絵画  (渋谷)"><img src="/assets/IMG_5298.JPG" alt=""></a></li>
+          <li><a href="/assets/IMG_5709.JPG" data-lightbox="gallery1" data-title="RING JACKET 'SUIT STYLE'  (新宿)"><img src="/assets/IMG_5709.JPG" alt=""></a></li>
+          <li><a href="/assets/8EF8AAF0-2E28-4AAD-BA8A-44C183885289.JPG" data-lightbox="gallery1" data-title="Friend snap  (丸の内)"><img src="/assets/8EF8AAF0-2E28-4AAD-BA8A-44C183885289.JPG" alt=""></a></li>
+          <li><a href="/assets/24A41748-69B1-487C-9AA6-EFB337AA9C16.JPG" data-lightbox="gallery1" data-title="Fantastic snow scene  (江戸川区)"><img src="/assets/24A41748-69B1-487C-9AA6-EFB337AA9C16.JPG" alt=""></a></li>
+          <li><a href="/assets/8C11AA29-E579-4D7B-B866-B7C80E852F46.JPG" data-lightbox="gallery1" data-title="Friend snap  (三軒茶屋)"><img src="/assets/8C11AA29-E579-4D7B-B866-B7C80E852F46.JPG" alt=""></a></li>
+          <li><a href="/assets/IMG_5214.JPG" data-lightbox="gallery1" data-title="富士サファリパーク  (静岡県)"><img src="/assets//IMG_5214.JPG" alt=""></a></li>
+          <li><a href="/assets/IMG_6456 2.jpg" data-lightbox="gallery1" data-title="Champagne  (自宅)"><img src="/assets/IMG_6456 2.jpg" alt=""></a></li>
+          <li><a href="/assets/IMG_6501.jpg" data-lightbox="gallery1" data-title="Another Energy Exhibition (Mori Arts Center)"><img src="/assets/IMG_6501.jpg" alt=""></a></li>
+          <li><a href="/assets/IMG_3566.jpg" data-lightbox="gallery1" data-title="東京駅(丸の内)"><img src="/assets/IMG_3566.jpg" alt=""></a></li>
         </ul>
+      </div>
     <!--/area--></div>
     <div id="dinner" class="tab-area">
       <h2>ディナー</h2>
@@ -141,6 +103,37 @@
     <!--/area--></div>
     <!--wrapper--></div>
 
+
+<!---------------------PHOTO----------------------->
+    <script>
+      lightbox.option({
+        'wrapAround': true,
+        'albumLabel': ' %1 / total %2 '
+      })
+      function fadeAnime(){
+      // flipLeft
+      $('.gallery li').each(function(){ 
+          var elemPos = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll >= elemPos - windowHeight){
+              $(this).addClass('flipLeft');
+          }else{
+              $(this).removeClass('flipLeft');
+          }
+      });
+      }
+    
+        $(window).scroll(function (){
+          fadeAnime();/
+        });
+    
+        $(window).on('load', function(){
+          fadeAnime();/
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    
 <!---------------------tab----------------------->
     <script>
         function GethashID (hashIDName){
@@ -168,7 +161,7 @@
         
         $(window).on('load', function () {
             $('.tab li:first-of-type').addClass("active");
-            $('.area:first-of-type').addClass("is-active");
+            $('.tab-area:first-of-type').addClass("is-active");
           var hashName = location.hash; 
           GethashID (hashName);
         });
