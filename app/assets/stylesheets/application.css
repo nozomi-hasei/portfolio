@@ -5,6 +5,7 @@ html{
 body{
   background:#000000;
   margin: 0;
+  max-height: 800px;
 }
 
 section{

@@ -311,7 +311,7 @@
 				var self = this;
 				self.windowHeight = (window.innerHeight || document.documentElement.clientHeight || 0);
 				if( parseInt(self.wrapper.clientHeight) != parseInt(document.body.style.height)){
-					document.body.style.height = self.wrapper.clientHeight + 'px';
+					document.body.style.height = self.wrapper.clientHeight;
 				}
 				self.resizeId = requestAnimationFrame(self.resize.bind(self));
 			},
