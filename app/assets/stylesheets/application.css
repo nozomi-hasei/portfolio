@@ -695,7 +695,7 @@ hr{
   left: 0;
   right: 0;
   bottom: 0;
-  height: 1000vh;
+  height: auto;
 	width:100%;
   margin: 0;
 	background:rgba(255, 255, 255, 0.875);/*背景を少し透過させる*/
