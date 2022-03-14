@@ -761,7 +761,7 @@ hr{
 .openbtn{
 	position:fixed;
     z-index: 9999;/*ボタンを最前面に*/
-	top: 42px;
+	top: 2.3%;
 	right: 20px;
 	cursor: pointer;
     width: 90px;
