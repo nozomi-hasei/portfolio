@@ -1,10 +1,24 @@
 <%#ABOUTスタート--------------------------------------%>
+<script>
+  window.onscroll = function(){
+    var scrollTop = window.pageYOffset ;
+    if (scrollTop > 900 ) { 
+      $('.area').css('background-color', 'black');
+      $('.area').css('transition', '8.3s')
+    }
+    if (scrollTop < 1400 ) { 
+      $('.area').css('background-color', 'black');
+      $('.area').css('transition', '5.5s')
+    }
+  }
+</script>
+
 <div class="wrap fadeUpTrigger">
   <h1 id="about"><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">ABOUT</span></span></h1>
 </div>
   <section class="area">
     <div class="luxy-el fadeUpTrigger" data-speed-x="5" ><img src="/assets/IMG_5920.JPG" alt="nozomi-hasei">
-      <div clas="box luxy-el" data-speed-y="-5" data-offset="380">
+      <div class="box luxy-el " data-speed-y="-5" data-offset="380">
         <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">長谷井　望</span></span></h2>
         <hr>
           <p>1999年9月2日生まれ、岡山県出身</p>
@@ -16,19 +30,6 @@
           <p>駒澤大学 法学部：ゼミにて取調べの可視化や外国人の人権を学び、議論を行なった。</p>
       </div>
     </div>
-    <script>
-      window.onscroll = function(){
-        var scrollTop = window.pageYOffset ;
-        if (scrollTop > 900 ) { 
-          $('.area').css('background-color', 'black');
-          $('.area').css('transition', '8.3s')
-        }
-        if (scrollTop < 1400 ) { 
-          $('.area').css('background-color', 'black');
-          $('.area').css('transition', '5.5s')
-        }
-      }
-    </script>
   </section>
   <section class="area">
     <div class="luxy-el fadeUpTrigger"  data-speed-x="5" ><img src="/assets/Workplace-with-laptop-994210.jpg" alt="nozom-ihasei">
