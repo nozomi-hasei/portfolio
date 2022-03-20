@@ -28,7 +28,7 @@
         <li><a href="#PERSONAL JOB">PERSONAL JOB</a></li>
       </ul>
       
-      <div id="YouTube" class="tab-area">
+      <div id="YouTube" class="area">
         <div class="wrap" id="tab">
           <h1>YouTube</h1>
         </div>
@@ -55,7 +55,7 @@
           </div>
       </div>
   
-      <div id="instagram" class="tab-area">
+      <div id="instagram" class="area">
         <div class="wrap" id="tab">
           <h1>INSTAGRAM</h1> 
         </div>
@@ -71,7 +71,7 @@
   
   
   
-      <div id="photo" class="tab-area">
+      <div id="photo" class="area">
         <h1>PHOTO</h1>
         <div class="wrapper fadeUpTrigger">
           <ul class="gallery">
@@ -90,7 +90,7 @@
           </ul>
         </div>
       </div>
-      <div id="dinner" class="tab-area">
+      <div id="dinner" class="area">
         <h2>ディナー</h2>
           <ul>
             <li>カレーライス</li>
@@ -99,6 +99,7 @@
           </ul>
       </div>
     </div>
+
 
 
 <!---------------------PHOTO----------------------->
@@ -142,7 +143,7 @@
                 var parentElm = $(this).parent(); 
                 $('.tab li').removeClass("active"); 
                 $(parentElm).addClass("active"); 
-                $(".tab-area").removeClass("is-active"); 
+                $(".area").removeClass("is-active"); 
                 $(hashIDName).addClass("is-active"); 
               }
             });
@@ -158,7 +159,7 @@
         
         $(window).on('load', function () {
             $('.tab li:first-of-type').addClass("active");
-            $('.tab-area:first-of-type').addClass("is-active");
+            $('.area:first-of-type').addClass("is-active");
           var hashName = location.hash; 
           GethashID (hashName);
         });

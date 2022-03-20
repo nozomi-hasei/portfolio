@@ -842,14 +842,14 @@ hr{
 
 
 /*エリアの表示非表示と形状*/
-.tab-area {
+.area {
 	opacity: 0;/*透過0*/
 	background: rgb(0, 0, 0);
 	padding:50px 20px;
 }
 
 /*areaにis-activeというクラスがついた時の形状*/
-.tab-area.is-active {
+.area.is-active {
     display: block;/*表示*/
     animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
     animation-duration: 2s;
@@ -865,3 +865,13 @@ hr{
 	}
 }
 
+ul{
+  list-style:none;
+}
+
+.wrapper{
+  width:100%;
+  max-height: 1500px;
+  margin:30px auto;
+    background:#000000;
+}
