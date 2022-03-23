@@ -788,7 +788,7 @@ hr{
 }
 
 .openbtn.active span:nth-of-type(1) {
-    top: 15px;
+    top: 18px;
     left: 18px;
     transform: translateY(6px) rotate(-45deg);
     width: 30%;
