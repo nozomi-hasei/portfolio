@@ -25,7 +25,7 @@ a{
 }
 
 h1:hover a{
-  text-decoration: line-through solid  rgba(112, 179, 128, 0.485);
+  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
 }
 
 /*========= top画像 ===============*/
@@ -168,15 +168,15 @@ header h1{
 
 body h1:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(112, 179, 128, 0.619);
+  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
 }
 
 body a:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(112, 179, 128, 0.619);
+  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
 }
 
-.tab-area h1:hover{
+.wrapper .tab li a:hover{
   color: gray;
   text-decoration: line-through solid  rgba(166, 112, 179, 0.52);
 }
@@ -226,16 +226,9 @@ h4{
 .wrap{
   padding: 1% 0 1% 0;
   margin: 1% 1% 3% 1%;
-  border-top: double 10px rgba(112, 179, 173, 0.485);
-  border-bottom: double 10px rgba(112, 179, 128, 0.485);
+  border-top: double 7px rgba(112, 179, 173, 0.485);
+  border-bottom: double 7px rgba(112, 179, 128, 0.485);
 }
-
-#tab-color{
-  border-top: double 10px rgba(179, 112, 143, 0.485);
-  border-bottom: double 10px rgba(149, 112, 179, 0.485);
-  padding: 4% 0% 0% 0%;
-}
-
 
 /*=========写真と文章=========*/
 .area{
@@ -622,7 +615,7 @@ hr{
     width: 100%;
     height: 5%;
     margin-top: 8%;
-    background-color: rgba(112, 179, 128, 0.619);/*伸びる背景色の設定*/
+    background-color: rgba(112, 179, 173, 0.619);/*伸びる背景色の設定*/
 }
 @keyframes bgLRextendAnime{
 	0% {
@@ -753,7 +746,7 @@ hr{
 }
 
 #g-nav li:hover a{
-  text-decoration: line-through solid  rgba(112, 179, 128, 0.619);;
+  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);;
 }
 /*========= ボタンのためのCSS ===============*/
 .openbtn{
@@ -823,6 +816,9 @@ hr{
 	flex-wrap: wrap;
   list-style: none;
   margin: -1% 0% 2% 0%;
+  border-top: double 7px rgba(179, 112, 143, 0.485);
+  border-bottom: double 7px rgba(149, 112, 179, 0.485);
+  padding: 0.5% 0% 0.5% 0%;
 }
 .tab li a{
 	display: block;
@@ -836,7 +832,7 @@ hr{
 }
 /*liにactiveクラスがついた時の形状*/
 .tab .active a{
-	background:#fff;
+  background-color:rgba(149, 112, 179, 0.485);
 }
 
 
