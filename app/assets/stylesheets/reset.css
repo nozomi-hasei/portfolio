@@ -280,8 +280,7 @@ textarea {
  */
 
 [type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-}
+[type="number"]::-webkit-outer-spin-button 
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.

@@ -383,7 +383,7 @@ h4{
 
 .contact{
   display: block;
-  margin: 4%;
+  margin: 4% 20% 4% 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,9 +434,16 @@ form .form-message{
 
 form .form-submit{
   height: 50px;
-  width: 100px;
+  width: 150px;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }
 
+form .form-submit:hover{
+  background-color: rgb(129, 207, 225);
+  color: rgb(0, 0, 0);
+}
 
 /*=========Footer=========*/
 
