@@ -379,6 +379,22 @@ h4{
   display: flex;
 }
 
+.tab-skill1{
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.tab-skill2{
+  height: 800px;
+  width: 500px;
+}
+
+.tab-photo img{
+  height: 300px;
+  width: 500px;
+}
+
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
