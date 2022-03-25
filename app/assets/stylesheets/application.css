@@ -395,6 +395,15 @@ h4{
   width: 500px;
 }
 
+.tab-plus{
+  margin-top: 4%;
+}
+
+.tab-plus p{
+  font-size: 6.0rem;
+  font-weight: bolder;
+}
+
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
