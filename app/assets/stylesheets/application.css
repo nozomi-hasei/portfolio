@@ -404,6 +404,16 @@ h4{
   font-weight: 100;
 }
 
+@media only screen and (max-width: 1200px) {
+  .tab-photo img{
+    height: 100px;
+    width: 200px;
+  }
+
+  .tab-plus p{
+    font-size: 2rem;
+  }
+}
 /*=========CONTACT FORM CSS=========*/
 
 .contact{
