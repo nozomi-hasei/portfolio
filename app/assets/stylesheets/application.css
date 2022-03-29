@@ -25,7 +25,7 @@ a{
 }
 
 h1:hover a{
-  text-decoration: line-through solid  rgb(255, 255, 255, 0.15);
+  text-decoration: line-through solid  rgba(255, 255, 255, 0.15);
 }
 
 /*========= top画像 ===============*/
@@ -178,7 +178,7 @@ body a:hover{
 
 .wrapper .tab li a:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(255, 255, 255, 0.3);
+  text-decoration: line-through solid  rgba(255, 255, 255, 0.246);
 }
 
 h2{
@@ -928,16 +928,10 @@ hr{
     color: #333;
     padding:30px;
     letter-spacing: 1px;
-    font-weight: 2100;
+    font-weight: 100;
     font-size: 20px;
     white-space: pre;
   }
-  
-  #g-nav li:hover a{
-    text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
-  }
-  
-  
 }
 /*==============タブ================*/
 
