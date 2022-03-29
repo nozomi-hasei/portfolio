@@ -25,7 +25,7 @@ a{
 }
 
 h1:hover a{
-  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
+  text-decoration: line-through solid  rgb(255, 255, 255, 0.15);
 }
 
 /*========= top画像 ===============*/
@@ -168,17 +168,17 @@ header h1{
 
 body h1:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
+  text-decoration: line-through solid  rgba(255, 253, 253, 0.3);
 }
 
 body a:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(112, 179, 173, 0.619);
+  text-decoration: line-through solid  rgb(255, 255, 255, 0.15);
 }
 
 .wrapper .tab li a:hover{
   color: gray;
-  text-decoration: line-through solid  rgba(166, 112, 179, 0.52);
+  text-decoration: line-through solid  rgba(255, 255, 255, 0.3);
 }
 
 h2{
@@ -476,7 +476,7 @@ form .form-submit{
 }
 
 form .form-submit:hover{
-  background-color: rgb(129, 207, 225);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 
