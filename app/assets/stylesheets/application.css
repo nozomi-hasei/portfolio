@@ -1010,6 +1010,63 @@ hr{
     font-size: 20px;
     white-space: pre;
   }
+
+  .openbtn{
+    position:fixed;
+      z-index: 9999;
+    top: 4px;
+    right: 7px;
+    cursor: pointer;
+      width: 25px;
+      height:25px;
+  }
+    
+  /*×に変化*/	
+  .openbtn span{
+      display: inline-block;
+      transition: all .4s;
+      position: absolute;
+      left: 14px;
+      top: 18px;
+      height: 1px;
+      border-radius: 2px;
+    background-color: #666;
+      width: 45%;
+    }
+  
+  .openbtn span:nth-of-type(1) {
+    top:8px;	
+    left:7px;
+  }
+  
+  .openbtn span:nth-of-type(2) {
+    top:13px;
+    left:7px;
+  }
+  
+  .openbtn span:nth-of-type(3) {
+    top:18px;
+    left: 7px;
+  }
+  
+  .openbtn.active span:nth-of-type(1) {
+      top: 8px;
+      left: 7px;
+      transform: translateY(5px) rotate(-45deg);
+      width: 40%;
+  }
+  
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .openbtn.active span:nth-of-type(3){
+      top: 16px;
+      left:7px;
+      transform: translateY(-3px) rotate(45deg);
+      width: 40%;
+  }
+  
 }
 /*==============タブ================*/
 
