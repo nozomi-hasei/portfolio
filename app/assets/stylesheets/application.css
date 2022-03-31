@@ -277,10 +277,10 @@ h4{
   border-bottom: double 7px rgba(112, 179, 128, 0.485);
 }
 
-/*=========写真と文章=========*/
+/*=========about=========*/
 .area{
   position:relative;
-  margin:0 15% 50% 15%;
+  margin: 10% 15% 50% 15%;
   max-width: 100%;
   max-height: 800px;
 }
@@ -328,7 +328,7 @@ h4{
 
 @media only screen and (max-width: 599px) {
   .area{
-    margin:0% 15% 0% 15%;
+    margin:5% 15% 0% 15%;
     height: 700px;
   }
 
@@ -346,6 +346,7 @@ h4{
 
 .app-box1{
   height: auto;
+  margin-top: 10%;
 }
 
 .app-box1 .app-box2 img{
@@ -409,6 +410,7 @@ h4{
 .item{
   background-color: black;
   padding: 20px;
+  margin: 15% 0 15% 0;
 }
 
 .item img{
@@ -464,7 +466,7 @@ h4{
 .tab-skill1{
   display: flex;
   justify-content: space-around;
-  margin: 5%;
+  margin: 8%;
 }
 
 .tab-skill2{
@@ -492,7 +494,7 @@ h4{
 
   .item{
     padding: 5px;
-    margin: 2% 2% 2% 2%;
+    margin: 10% 2% 10% 2%;
   }
 
 
@@ -1158,7 +1160,8 @@ hr{
 .wrapper{
   width:100%;
   max-height: 2000px;
-    background:#000000;
+  margin-top: 5%;
+  background:hsl(0, 0%, 0%);
 }
 
 /* スマホ */
@@ -1182,6 +1185,7 @@ hr{
   .wrapper{
     width:100%;
     height: 1500px;
-      background:#000000;
+    background:hsl(0, 0%, 0%);
+    margin-top: 3%;
   }
 }
