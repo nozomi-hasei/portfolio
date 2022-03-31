@@ -509,7 +509,7 @@ h4{
   }
 
   .item  p{
-    font-size: 2px;
+    font-size: 8px;
   }
 
   .tab-skill1{
@@ -617,7 +617,7 @@ form .form-submit:hover{
   
   form input{
     letter-spacing: 2px;
-    font-size: 0.2vh;
+    font-size: 8px;
   }
   
   form #contact-ward{
@@ -625,7 +625,7 @@ form .form-submit:hover{
   }
   
   form #contact-ward p{
-    font-size: 0.2vh;
+    font-size: 8px;
     word-break: keep-all;
     text-align: center;
     color: rgb(182, 182, 182);
