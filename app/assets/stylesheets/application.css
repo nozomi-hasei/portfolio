@@ -805,7 +805,7 @@ hr{
   border:none;
   height:1.5px;
   margin-bottom: 3%;
-  background:linear-gradient(90deg, rgba(255, 255, 255, 0)0%,rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+  background:linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(255, 255, 255),rgba(255, 255, 255, 0));
 }
 
 
