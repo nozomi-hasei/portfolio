@@ -1,3 +1,36 @@
+<!---------------------tab----------------------->
+<script>
+    function GethashID (hashIDName){
+      if(hashIDName){
+    		//タブ設定
+        $('.tab li').find('a').each(function() { 
+          var idName = $(this).attr('href'); 
+          if(idName == hashIDName){ 
+            var parentElm = $(this).parent(); 
+            $('.tab li').removeClass("active"); 
+            $(parentElm).addClass("active"); 
+            $(".area-tab").removeClass("is-active"); 
+            $(hashIDName).addClass("is-active"); 
+          }
+        });
+      }
+    }
+    
+    $('.tab a').on('click', function() {
+      var idName = $(this).attr('href'); 
+      GethashID (idName);
+      return false;
+    });
+    
+    
+    $(window).on('load', function () {
+        $('.tab li:first-of-type').addClass("active");
+        $('.area-tab:first-of-type').addClass("is-active");
+      var hashName = location.hash; 
+      GethashID (hashName);
+    });
+</script>
+
 <%#workスタート--------------------------------------%>
 <div class="wrap fadeUpTrigger">
   <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">WORK</span></span></h1>
@@ -138,35 +171,3 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     
-<!---------------------tab----------------------->
-    <script>
-        function GethashID (hashIDName){
-          if(hashIDName){
-        		//タブ設定
-            $('.tab li').find('a').each(function() { 
-              var idName = $(this).attr('href'); 
-              if(idName == hashIDName){ 
-                var parentElm = $(this).parent(); 
-                $('.tab li').removeClass("active"); 
-                $(parentElm).addClass("active"); 
-                $(".area-tab").removeClass("is-active"); 
-                $(hashIDName).addClass("is-active"); 
-              }
-            });
-          }
-        }
-        
-        $('.tab a').on('click', function() {
-          var idName = $(this).attr('href'); 
-          GethashID (idName);
-          return false;
-        });
-        
-        
-        $(window).on('load', function () {
-            $('.tab li:first-of-type').addClass("active");
-            $('.area-tab:first-of-type').addClass("is-active");
-          var hashName = location.hash; 
-          GethashID (hashName);
-        });
-    </script>
