@@ -20,37 +20,37 @@
     <div id="container"></div>
     <script>
         // 文字ローディング
-    function BgFadeAnime(){
-      $('.bgLRextendTrigger').each(function(){
-        var elemPos = $(this).offset().top-50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight){
-        $(this).addClass('bgLRextend');
-        }else{
-          $(this).removeClass('bgLRextend');
-        }
-      });
-    
-      $('.bgappearTrigger').each(function(){ 
-        var elemPos = $(this).offset().top-50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight){
-        $(this).addClass('bgappear');
-        }else{
-          $(this).removeClass('bgappear');
-        }
-      });
-    }
-    
-      $(window).scroll(function (){
-        BgFadeAnime();
-      });
-    
-      $(window).on('load', function(){
-        BgFadeAnime();
-      });
+      function BgFadeAnime(){
+        $('.bgLRextendTrigger').each(function(){
+          var elemPos = $(this).offset().top-50;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll >= elemPos - windowHeight){
+          $(this).addClass('bgLRextend');
+          }else{
+            $(this).removeClass('bgLRextend');
+          }
+        });
+      
+        $('.bgappearTrigger').each(function(){ 
+          var elemPos = $(this).offset().top-50;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll >= elemPos - windowHeight){
+          $(this).addClass('bgappear');
+          }else{
+            $(this).removeClass('bgappear');
+          }
+        });
+      }
+      
+        $(window).scroll(function (){
+          BgFadeAnime();
+        });
+      
+        $(window).on('load', function(){
+          BgFadeAnime();
+        });
     </script>
     <script>
     function fadeAnime(){
@@ -78,7 +78,14 @@
 <%#ヘッダー--------------------------------------%>
     <div id="container">
       <header>
-        <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
+			  <div class="top-item">
+          <h1><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger"><%= link_to "NOZOMI HASEI", root_path %></span></span></h1>
+          <ul>
+            <li><img src="/assets/1298747_instagram_brand_logo_social media_icon.png" alt="nozomi-hasei" id="logo"></li>
+					  <li><img src="/assets/1298738_facebook_brand_fb_logo_social media_icon.png" alt="nozomi-hasei" id="logo" ></li>
+            <li><img src="/assets/1298743_github_git_logo_social_icon.png" alt="nozomi-hasei" id="logo"></li>
+			    </ul>
+				</div>
 			</header>
 <%#メニューバー---------------------------------%>
         <div class="openbtn "><span></span><span></span><span></span></div>
@@ -147,10 +154,19 @@
 <%#フッター---------------------------------------------%>
       <footer>
         <div class="footer-area fadeUpTrigger">
+          <h2 id="page-top"><a href="#"> - Page top -</a></h2>
           <p>©️ 2022 NOZOMI HASEI</P>
         </div>
       </footer>
     <!--/container--></div>
+<script>
+  $('#page-top').click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 500);
+      return false;
+  });
+</script>
 
   <script>
   (function(root, factory) {

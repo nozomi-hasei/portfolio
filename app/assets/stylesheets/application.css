@@ -227,12 +227,35 @@ img{
 header{
   background-color: rgba(98, 55, 55, 0);
 }
+
+header .top-item{
+  width: 100%;
+}
+
 header h1{
+  position: relative;
   text-align: center;
   padding: 1%;
   font-size: 3.5rem;
   letter-spacing: 8px;
   font-weight: 100;
+}
+
+header .top-item ul{
+  position: absolute;
+  display: flex;
+  list-style: none;
+  right: 10%;
+  top: 25px;
+}
+header .top-item li{
+  padding: 0 15% 0 15%;
+
+}
+
+header #logo{
+  height: 35px;
+  width: 35px;
 }
 
 h1{
