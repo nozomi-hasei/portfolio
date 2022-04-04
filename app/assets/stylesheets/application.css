@@ -334,6 +334,23 @@ h4{
 
 @media only screen and (max-width: 599px) {
 
+  header .top-item ul{
+    position: absolute;
+    display: flex;
+    list-style: none;
+    right: 13%;
+    top: -4px;
+  }
+  header .top-item li{
+    padding: 0 10% 0 10%;
+  
+  }
+  
+  header #logo{
+    height: 10px;
+    width: 10px;
+  }
+
   header h1{
     font-size: 15px;
     letter-spacing: 2px;
@@ -814,13 +831,15 @@ form .form-submit:hover{
 footer{
   width:100%;
   z-index: 999;
-  padding:5% 0;
-  margin-top: 10%;
   bottom:80px;
   height:50px;
   color: rgb(182, 182, 182);
   text-align: center;
   background:rgb(0, 0, 0);
+}
+
+footer h2{
+  font-size: 2.0vh;
 }
 
 footer p{
@@ -835,8 +854,12 @@ footer .footer-area{
 
 @media only screen and (max-width: 599px) {
 
-  footer p{
+  footer h2{
     font-size: 5px;
+  }
+
+  footer p{
+    font-size: 2px;
   }
 }
 
