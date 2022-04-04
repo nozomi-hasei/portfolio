@@ -179,7 +179,6 @@ img{
   -o-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
-  filter: brightness(70%);
 }
 
 .area:hover img{
@@ -392,7 +391,7 @@ h4{
 /*=========about=========*/
 .area{
   position:relative;
-  margin: 10% 15% 50% 15%;
+  margin: 10% 45% 20% 5%;
   max-width: 100%;
   max-height: 800px;
 }
@@ -404,6 +403,7 @@ h4{
   line-height: 0;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 
@@ -411,9 +411,8 @@ h4{
 /*1,3目写真の文章*/
 .area .box{
   position: absolute;
-  top:30%;
-  margin-left: auto;
-  margin-right: auto;
+  top:0%;
+  margin-left: 80%;
   width: 100%;
   height: auto;
   background-color: #00000060;
@@ -422,16 +421,15 @@ h4{
 
 /*２目写真の文章*/
 .area:nth-child(2n) .box{
-  margin-left: auto;
+  margin-left: 80%;
   margin-right: auto;
 }
 
 .area .luxy-el #original{
   position: absolute;
-  top:30%;
+  top:0%;
   height: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 80%;
   padding: 40px;
   background-color: #00000060;
   box-shadow: 7px 7px 0px 0 #00000033;
