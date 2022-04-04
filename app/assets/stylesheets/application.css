@@ -15,7 +15,7 @@ section{
 
 p{
   color: rgb(182, 182, 182);
-  font-size: 30px;
+  font-size: 20px;
   padding: 1.5%;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -146,7 +146,7 @@ h1:hover a{
   padding: 0;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
-  font-size: 2.7rem;
+  font-size: 40px;
   letter-spacing: 5px;
   color: rgba(210, 210, 210, 0.865);
   text-decoration: line-through solid  rgba(111, 179, 127, 0.24);
@@ -237,7 +237,7 @@ header h1{
   position: relative;
   text-align: center;
   padding: 1%;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 8px;
   font-weight: 100;
 }
@@ -246,7 +246,7 @@ header .top-item ul{
   position: absolute;
   display: flex;
   list-style: none;
-  right: 230px;
+  right: 210px;
   top: 25px;
 }
 header .top-item li{
@@ -266,7 +266,7 @@ header #logo:hover{
 
 h1{
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
   letter-spacing: 5px;
@@ -290,7 +290,7 @@ a:hover{
 
 h2{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 100;
   padding: 3%;
   letter-spacing: 5px;
@@ -302,7 +302,7 @@ h2{
 h3{
   position: relative;
   display: inline-block;
-  padding:  55px;
+  padding:  15px;
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: 100;
@@ -622,8 +622,8 @@ h4{
 }
 
 .tab-photo img{
-  height: 300px;
-  width: 500px;
+  height: 200px;
+  width: 300px;
 }
 
 .tab-photo:hover img{
