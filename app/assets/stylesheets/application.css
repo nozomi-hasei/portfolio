@@ -1,12 +1,44 @@
 html{
   max-height: 2000px;
   font-size: 62.5%;
+  animation: change-background-color-anim 10s linear infinite;
 }
 
 body{
-  background:#000000;
+  background:rgb(0, 0, 0);
   margin: 0;
   max-height: 2000px;
+  animation: change-back-color-anim 25s linear infinite;
+}
+
+@keyframes change-back-color-anim {
+  0%{
+    background-color: rgb(0, 0, 0);
+	}
+  15%{
+    background-color: rgb(0, 0, 0);
+  }
+
+  20%{
+    background-color:rgb(45, 75, 80);
+	}
+
+  55%{
+    background-color:rgb(45, 75, 80);
+  }
+
+  60%{
+    background-color: rgb(99, 51, 80);
+  }
+
+  95%{
+    background-color: rgb(99, 51, 80);
+
+  }
+
+  100%{
+    background-color: rgb(0, 0, 0);
+  }
 }
 
 section{
@@ -230,7 +262,7 @@ img{
 }
 
 header{
-  background-color: rgba(98, 55, 55, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 header .top-item{
@@ -411,12 +443,12 @@ h4{
 /*1,3目写真の文章*/
 .area .box{
   position: absolute;
-  top:0%;
+  top:-40%;
   margin-left: 80%;
   width: 100%;
   height: auto;
-  background-color: #00000060;
-  box-shadow: 7px 7px 0px 0 #00000033;
+  background-color: rgba(0, 0, 0, 0.376);
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
 /*２目写真の文章*/
@@ -427,12 +459,12 @@ h4{
 
 .area .luxy-el #original{
   position: absolute;
-  top:0%;
+  top:-40%;
   height: 900px;
   margin-left: 80%;
   padding: 40px;
-  background-color: #00000060;
-  box-shadow: 7px 7px 0px 0 #00000033;
+  background-color: rgba(0, 0, 0, 0.376);
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* スマホ */
@@ -546,7 +578,6 @@ h4{
 }
 
 .item{
-  background-color: black;
   padding: 20px;
   margin: 15% 0 15% 0;
 }
@@ -722,7 +753,6 @@ form #contact-ward p{
 }
 
 form{
-  background-color: rgb(0, 0, 0);
   height: 1400px;
   display: block;
 }
@@ -846,7 +876,6 @@ footer{
   height:50px;
   color: rgb(182, 182, 182);
   text-align: center;
-  background:rgb(0, 0, 0);
 }
 
 footer h2{
@@ -1281,7 +1310,6 @@ hr{
 }
 .tab li a{
 	display: block;
-	background:rgb(0, 0, 0);
 	padding:10px 50px;
   font-size: 2.5rem;
   font-weight: 100;
@@ -1299,7 +1327,6 @@ hr{
 .area-tab {
   display: none;
 	opacity: 0;/*透過0*/
-	background: rgb(0, 0, 0);
 }
 
 /*areaにis-activeというクラスがついた時の形状*/
@@ -1323,14 +1350,12 @@ hr{
   width:100%;
   height: auto;
   margin-top: 5%;
-  background:hsl(0, 0%, 0%);
 }
 
 /* スマホ */
 @media only screen and (max-width: 599px) {
   .tab li a{
     display: block;
-    background:rgb(0, 0, 0);
     margin:0 5px;
     padding:1px 2px;
     font-size: 12px;
@@ -1347,7 +1372,6 @@ hr{
   .wrapper{
     width:100%;
     height: 1500px;
-    background:hsl(0, 0%, 0%);
     margin-top: 3%;
   }
 }
