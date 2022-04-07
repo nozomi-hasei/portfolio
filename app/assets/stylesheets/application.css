@@ -190,6 +190,8 @@ h1:hover a{
   text-decoration-thickness: 13px;
 }
 
+
+
 /*.top-photo-font hr{
   height: 100px;
   background: rgba(209, 209, 209, 0.183);
@@ -498,7 +500,6 @@ h4{
 
 .app-box1{
   height: auto;
-  margin-top: 10%;
 }
 
 .app-box1 .app-box2 img{
@@ -506,9 +507,11 @@ h4{
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  width: 800px;
-  height: 600px;
+  margin-bottom: 5%;
+  width: 600px;
+  height: 400px;
 }
+
 
 .app-box1:hover img{
   -webkit-filter: grayscale(100%);
@@ -535,14 +538,14 @@ h4{
 .app-word{
   display: flex;
   justify-content: space-around;
-  margin-top: 8%;
-  height: 500px;
+  max-height: 500px;
+  margin-top: 3%;
 }
 
 
 .app-word1{
   width: 40%;
-  height: 400px;
+  max-height: 400px;
   text-align: center;
 }
 
