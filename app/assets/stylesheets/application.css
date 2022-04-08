@@ -221,6 +221,8 @@ img{
   -o-filter: grayscale(70%);
   -ms-filter: grayscale(70%);
   filter: grayscale(70%);
+  transform: scale(1.1);
+  transition-duration: 0.7s;
 }
 
 .app-box1:hover img{
