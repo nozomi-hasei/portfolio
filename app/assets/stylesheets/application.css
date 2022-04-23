@@ -918,8 +918,9 @@ footer .footer-area{
 }
 
 .gallery{
-  columns: 4;/*段組みの数*/
+  columns: 3;/*段組みの数*/
   padding:0 15px;/*ギャラリー左右に余白をつける*/
+  list-style: none;
   }
   
   .gallery li {
@@ -929,7 +930,7 @@ footer .footer-area{
   /*ギャラリー内のイメージは横幅100%にする*/
   .gallery img{
     width:100%;
-    height:auto;
+    height: 322px;
     vertical-align: bottom;/*画像の下にできる余白を削除*/}
   
   /*　横幅900px以下の段組み設定　*/
