@@ -918,22 +918,21 @@ footer .footer-area{
 }
 
 .gallery{
-  columns: 3;/*段組みの数*/
-  padding:0 15px;/*ギャラリー左右に余白をつける*/
+  columns: 3;
+  padding:0 15px;
   list-style: none;
   }
   
   .gallery li {
-      margin-bottom: 20px;/*各画像下に余白をつける*/
+      margin-bottom: 20px;
   }
   
-  /*ギャラリー内のイメージは横幅100%にする*/
+
   .gallery img{
     width:100%;
     height: 322px;
-    vertical-align: bottom;/*画像の下にできる余白を削除*/}
+    vertical-align: bottom;}
   
-  /*　横幅900px以下の段組み設定　*/
   @media only screen and (max-width: 900px) {
     .gallery{
     columns:3;
@@ -1094,11 +1093,9 @@ hr{
 /*========= ナビゲーションのためのCSS ===============*/
 
 #g-nav{
-    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
-    position:fixed;
+  position:fixed;
 	z-index: -1;
-	opacity: 0;/*はじめは透過0*/
-    /*ナビの位置と形状*/
+	opacity: 0;
 	top:0;
   left: 0;
   right: 0;
@@ -1106,32 +1103,27 @@ hr{
   height: auto;
 	width:100%;
   margin: 0;
-	background:rgba(255, 255, 255, 0.875);/*背景を少し透過させる*/
-    /*動き*/
+	background:rgba(255, 255, 255, 0.875);
 	transition: all 0.3s;
 }
 
-/*アクティブクラスがついたら透過なしにして最前面へ*/
 #g-nav.panelactive{
 	opacity: 1;
 	z-index:999;
 }
 
-/*ナビゲーションの縦スクロール*/
 #g-nav.panelactive #g-nav-list{
-    /*ナビの数が増えた場合縦スクロール*/
     position: fixed;
     z-index: 999; 
     width: 100%;
-    height: 100vh;/*表示する高さ*/
+    height: 100vh;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 
 /*ナビゲーション*/
 #g-nav ul {
-    display: none;/*はじめは非表示*/
-    /*ナビゲーション天地中央揃え*/
+    display: none;
     position: absolute;
     z-index: 999;
     top:40%;
@@ -1167,7 +1159,7 @@ hr{
 /*========= ボタンのためのCSS ===============*/
 .openbtn{
 	position:fixed;
-    z-index: 9999;/*ボタンを最前面に*/
+  z-index: 9999;
 	top: 0vh;
 	right: 0.4vw;
 	cursor: pointer;
@@ -1226,8 +1218,7 @@ hr{
 @media only screen and (max-width: 599px) {
 
   #g-nav ul {
-    display: none;/*はじめは非表示*/
-    /*ナビゲーション天地中央揃え*/
+    display: none;
     position: absolute;
     z-index: 999;
     top:30%;
@@ -1334,13 +1325,13 @@ hr{
 /*エリアの表示非表示と形状*/
 .area-tab {
   display: none;
-	opacity: 0;/*透過0*/
+	opacity: 0;
 }
 
 /*areaにis-activeというクラスがついた時の形状*/
 .area-tab.is-active {
-    display: block;/*表示*/
-    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    display: block;
+    animation-name: displayAnime;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
