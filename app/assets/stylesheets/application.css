@@ -240,7 +240,7 @@ img{
   
   .top-photo img{
     max-width: 100%;
-    height:45vh;
+    height:30vh;
     margin-left: 10%;
   }
   
@@ -348,6 +348,7 @@ h2{
 h3{
   position: relative;
   display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding:  15px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -702,6 +703,7 @@ h4{
 
   .item h2{
     letter-spacing: 1px;
+    white-space: none;
   }
 
   .item  p{
@@ -827,7 +829,6 @@ form .form-submit:hover{
   }
   
   form{
-    background-color: rgb(0, 0, 0);
     height: 500px;
     display: block;
     margin-top: 2%;
@@ -930,7 +931,7 @@ footer .footer-area{
 
   .gallery img{
     width:100%;
-    height: 322px;
+    height: 130px;
     vertical-align: bottom;}
   
   @media only screen and (max-width: 900px) {
@@ -1370,7 +1371,6 @@ hr{
 
   .wrapper{
     width:100%;
-    height: 1500px;
     margin-top: 3%;
   }
 }
