@@ -804,16 +804,15 @@ form .form-submit:hover{
   color: rgb(0, 0, 0);
 }
 
-.contents-row{
-  align-items: center;
-}
 
 .success{
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .success .success-item1 h3 {
-  text-align: center;
+  display: block;
+  align-items: center;
 }
 
 .success .success-item2 p {
