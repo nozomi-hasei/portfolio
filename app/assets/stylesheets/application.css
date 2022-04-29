@@ -804,6 +804,22 @@ form .form-submit:hover{
   color: rgb(0, 0, 0);
 }
 
+.contents-row{
+  align-items: center;
+}
+
+.success{
+  width: 100%;
+}
+
+.success .success-item1 h3 {
+  text-align: center;
+}
+
+.success .success-item2 p {
+  text-align: center;
+}
+
 /* スマホ */
 
 @media only screen and (max-width: 599px) {
